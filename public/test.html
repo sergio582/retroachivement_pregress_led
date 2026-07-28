@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test des trophées</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            background: #15181e;
+            color: #fff;
+            font-family: Inter, Arial, sans-serif;
+        }
+
+        main {
+            width: min(420px, calc(100% - 32px));
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 16px;
+            background: #222731;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 0 0 22px;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.5;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px 20px;
+            border: 0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ffe56b, #f2aa00);
+            color: #241800;
+            font: inherit;
+            font-size: 17px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 5px 18px rgba(242, 170, 0, 0.3);
+        }
+
+        button:hover {
+            filter: brightness(1.08);
+        }
+
+        button:disabled {
+            cursor: wait;
+            opacity: 0.65;
+        }
+
+        #status {
+            min-height: 20px;
+            margin-top: 16px;
+            color: #80f0a3;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Test des trophées</h1>
+        <p>Déclenche les animations de la barre et de la LED sans modifier ta progression réelle.</p>
+        <button id="simulate" type="button">🏆 Simuler un trophée</button>
+        <div id="status" role="status"></div>
+    </main>
+
+    <script>
+        "use strict";
+
+        const button = document.getElementById("simulate");
+        const status = document.getElementById("status");
+
+        button.addEventListener("click", async () => {
+            button.disabled = true;
+            status.textContent = "";
+
+            try {
+                const response = await fetch("/api/simulate-trophy", { method: "POST" });
+                const data = await response.json();
+                if (!response.ok || !data.ok) throw new Error();
+
+                status.textContent = "Simulation envoyée !";
+            } catch {
+                status.textContent = "La simulation a échoué.";
+            } finally {
+                button.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

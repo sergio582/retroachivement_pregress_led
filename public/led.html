@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LED RetroAchievements</title>
+    <style>
+        :root {
+            --led-size: min(76vmin, 76px);
+            --green: #35f06f;
+            --green-dark: #087c32;
+            --yellow: #ffe85a;
+            --yellow-dark: #e6a900;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .led {
+            position: relative;
+            width: var(--led-size);
+            height: var(--led-size);
+            overflow: hidden;
+            border: max(2px, calc(var(--led-size) * 0.055)) solid rgba(0, 0, 0, 0.42);
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 36% 30%, #d9ffe5 0 5%, var(--green) 17%, var(--green-dark) 72%);
+            box-shadow:
+                0 0 calc(var(--led-size) * 0.12) rgba(53, 240, 111, 0.95),
+                0 0 calc(var(--led-size) * 0.24) rgba(53, 240, 111, 0.55),
+                inset calc(var(--led-size) * -0.08) calc(var(--led-size) * -0.1)
+                    calc(var(--led-size) * 0.16) rgba(0, 0, 0, 0.42);
+            animation: green-pulse 2.2s ease-in-out infinite;
+        }
+
+        .led::after {
+            content: "";
+            position: absolute;
+            top: 8%;
+            left: 18%;
+            width: 45%;
+            height: 25%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.58);
+            filter: blur(2px);
+            transform: rotate(-25deg);
+        }
+
+        .led.trophy {
+            animation: trophy-flash 240ms steps(1, end) 8;
+        }
+
+        @keyframes green-pulse {
+            0%,
+            100% {
+                filter: brightness(0.88);
+                transform: scale(0.98);
+            }
+
+            50% {
+                filter: brightness(1.28);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes trophy-flash {
+            0%,
+            100% {
+                background:
+                    radial-gradient(circle at 36% 30%, #fffde2 0 7%, var(--yellow) 20%, var(--yellow-dark) 72%);
+                box-shadow:
+                    0 0 calc(var(--led-size) * 0.24) rgba(255, 232, 90, 1),
+                    0 0 calc(var(--led-size) * 0.58) rgba(255, 202, 0, 0.9),
+                    inset calc(var(--led-size) * -0.08) calc(var(--led-size) * -0.1)
+                        calc(var(--led-size) * 0.16) rgba(90, 50, 0, 0.3);
+                filter: brightness(1.45);
+            }
+
+            50% {
+                background:
+                    radial-gradient(circle at 36% 30%, #d9ffe5 0 5%, var(--green) 17%, var(--green-dark) 72%);
+                box-shadow:
+                    0 0 calc(var(--led-size) * 0.1) rgba(53, 240, 111, 0.8),
+                    inset calc(var(--led-size) * -0.08) calc(var(--led-size) * -0.1)
+                        calc(var(--led-size) * 0.16) rgba(0, 0, 0, 0.42);
+                filter: brightness(0.75);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .led {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="led" id="led" role="status" aria-label="Aucun nouveau trophée"></div>
+
+    <script>
+        "use strict";
+
+        const REFRESH_MS = 5000;
+        const led = document.getElementById("led");
+        let previousProgress = null;
+        let previousSimulationEventId = null;
+        let updateInProgress = false;
+
+        function flashForTrophy() {
+            led.classList.remove("trophy");
+            void led.offsetWidth;
+            led.classList.add("trophy");
+            led.setAttribute("aria-label", "Nouveau trophée obtenu");
+        }
+
+        led.addEventListener("animationend", (event) => {
+            if (event.animationName !== "trophy-flash") return;
+            led.classList.remove("trophy");
+            led.setAttribute("aria-label", "Aucun nouveau trophée");
+        });
+
+        async function updateLed() {
+            if (updateInProgress) return;
+            updateInProgress = true;
+
+            try {
+                const response = await fetch("/api/progress", { cache: "no-store" });
+                const data = await response.json();
+
+                if (!response.ok || !data.ok) return;
+
+                const currentProgress = {
+                    gameId: Number(data.gameId),
+                    unlocked: Number(data.unlocked) || 0
+                };
+                const simulationEventId = Number(data.simulationEventId) || 0;
+                const simulatedTrophy =
+                    previousSimulationEventId !== null &&
+                    simulationEventId > previousSimulationEventId;
+
+                if (
+                    simulatedTrophy ||
+                    (
+                        previousProgress &&
+                        currentProgress.gameId === previousProgress.gameId &&
+                        currentProgress.unlocked > previousProgress.unlocked
+                    )
+                ) {
+                    flashForTrophy();
+                }
+
+                previousProgress = currentProgress;
+                previousSimulationEventId = simulationEventId;
+            } catch {
+                // La LED reste verte si l'API est momentanément indisponible.
+            } finally {
+                updateInProgress = false;
+            }
+        }
+
+        updateLed();
+        setInterval(updateLed, REFRESH_MS);
+    </script>
+</body>
+
+</html>

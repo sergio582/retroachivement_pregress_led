@@ -1,0 +1,13 @@
+{
+  "name": "ra-progress-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Overlay OBS transparent pour afficher la progression RetroAchievements",
+  "main": "server.js",
+  "scripts": {"start": "node server.js"},
+  "engines": {"node": ">=18"},
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
