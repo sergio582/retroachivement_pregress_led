@@ -187,15 +187,21 @@
         }
 
         .caught {
-            width: 17px;
+            width: 24px;
+            height: 24px;
+            background: center / 24px 24px no-repeat
+                url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEW0tLQxMTFKUlJ7e4OkpMXezfb///+cSjm0UjneWjn/lDn/1Tn/AP//AP//AP//AP/eR/OmAAAAAXRSTlMAQObYZgAAAIRJREFUGJVjYCAeMAoKCsDZUqtWLYTxgOxVqyZCJVbvAnJWQqSktmWDOBMxOIyrIMpmCoA5YDATC6dqFVjVdDBHfZWS1sqZM4vAHCUlN6eZ05WUwBYJK6UlKSkpGYLtEU12c1JSMnWEOCfM2DQ0NATqUpFQINsR5gURFxdHhIeQPEcEAAC9sTVEj1BiXgAAAABJRU5ErkJggg==");
             color: var(--accent);
             font-size: 14px;
             font-weight: 1000;
+            line-height: 24px;
             text-align: center;
             text-shadow: 0 0 7px rgba(169, 150, 255, 0.8);
+            image-rendering: pixelated;
         }
 
         .caught.missing {
+            background-image: none;
             color: rgba(239, 234, 255, 0.3);
             text-shadow: none;
         }
@@ -256,6 +262,7 @@
         "use strict";
 
         const REFRESH_MS = 1200;
+        const previewMode = new URLSearchParams(window.location.search).get("preview");
         const elements = {
             location: document.getElementById("location-name"),
             methods: document.getElementById("methods"),
@@ -331,7 +338,7 @@
                     createElement(
                         "span",
                         pokemon.caught ? "caught" : "caught missing",
-                        pokemon.caught ? "✓" : "○"
+                        pokemon.caught ? "" : "○"
                     )
                 );
                 item.lastElementChild.setAttribute(
@@ -408,8 +415,18 @@
             }
         }
 
-        update();
-        setInterval(update, REFRESH_MS);
+        if (previewMode === "max-encounters") {
+            fetch("/api/emerald/test/max-encounters", { cache: "no-store" })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (!data.ok) throw new Error();
+                    render(data);
+                })
+                .catch(() => renderError("Impossible de charger les données de test."));
+        } else {
+            update();
+            setInterval(update, REFRESH_MS);
+        }
     </script>
 </body>
 

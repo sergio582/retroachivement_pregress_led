@@ -182,6 +182,7 @@ const DETAIL_WORDS = {
   ROOMS: "salles",
   SHOP: "boutique",
   SMART: "Intelligence",
+  SOUTHEAST: "sud-est",
   TOUGH: "Robustesse",
   UNDERWATER: "sous-marin",
   UNUSED: "inutilisé"

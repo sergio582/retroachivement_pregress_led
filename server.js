@@ -6,6 +6,7 @@ const express = require("express");
 const path = require("path");
 const retroArchClient = require("./lib/retroarch");
 const { getEmeraldEncounters } = require("./lib/emerald");
+const emeraldData = require("./data/emerald-fr.json");
 
 const app = express();
 const PORT = Number.parseInt(process.env.PORT || "3000", 10);
@@ -147,6 +148,36 @@ app.get("/api/emerald/encounters", async (_request, response) => {
       error: error.message || "Impossible de lire Pokémon Émeraude."
     });
   }
+});
+
+app.get("/api/emerald/test/max-encounters", (_request, response) => {
+  const area = Object.values(emeraldData.maps).reduce((currentMax, candidate) => {
+    const currentCount = currentMax.methods.reduce(
+      (total, method) => total + method.pokemon.length,
+      0
+    );
+    const candidateCount = candidate.methods.reduce(
+      (total, method) => total + method.pokemon.length,
+      0
+    );
+    return candidateCount > currentCount ? candidate : currentMax;
+  });
+
+  const methods = area.methods.map((method) => ({
+    ...method,
+    pokemon: method.pokemon.map((pokemon) => ({
+      ...pokemon,
+      caught: pokemon.dexNumber % 2 === 0
+    }))
+  }));
+
+  response.set("Cache-Control", "no-store").json({
+    ok: true,
+    location: { name: area.name },
+    methods,
+    notes: area.notes,
+    romMatches: true
+  });
 });
 
 app.post("/api/simulate-trophy", (_request, response) => {

@@ -15,13 +15,14 @@
             margin: 0;
             display: grid;
             place-items: center;
+            padding: 24px 0;
             background: #15181e;
             color: #fff;
             font-family: Inter, Arial, sans-serif;
         }
 
         main {
-            width: min(420px, calc(100% - 32px));
+            width: min(520px, calc(100% - 32px));
             padding: 28px;
             border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 16px;
@@ -70,6 +71,31 @@
             color: #80f0a3;
             font-weight: 700;
         }
+
+        .emerald-preview {
+            margin-top: 26px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            text-align: left;
+        }
+
+        .emerald-preview h2 {
+            margin: 0 0 6px;
+            font-size: 18px;
+        }
+
+        .emerald-preview p {
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .emerald-preview iframe {
+            display: block;
+            width: 100%;
+            height: 700px;
+            border: 0;
+            background: transparent;
+        }
     </style>
 </head>
 
@@ -79,6 +105,15 @@
         <p>Déclenche les animations de la barre et de la LED sans modifier ta progression réelle.</p>
         <button id="simulate" type="button">🏆 Simuler un trophée</button>
         <div id="status" role="status"></div>
+
+        <section class="emerald-preview">
+            <h2>Aperçu de la liste la plus haute</h2>
+            <p>La zone contenant le plus de lignes de Pokémon dans les données d’Émeraude.</p>
+            <iframe
+                src="/emerald.html?preview=max-encounters"
+                title="Aperçu de la liste de rencontres la plus haute"
+            ></iframe>
+        </section>
     </main>
 
     <script>
