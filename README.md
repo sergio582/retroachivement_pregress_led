@@ -49,6 +49,8 @@ Cette source lit en direct les six emplacements de l’équipe sur une seule lig
 et affiche les sprites GBA, les noms ou surnoms, les états, les objets tenus et
 les PV :
 
+- les cartes sont compactes et s’adaptent à leur contenu, avec un espacement
+  identique au-dessus du nom et sous la barre de PV ;
 - URL : `http://127.0.0.1:3000/team.html`
 - largeur : `940`
 - hauteur : `140`
