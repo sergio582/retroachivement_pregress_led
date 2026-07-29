@@ -22,7 +22,7 @@
         }
 
         main {
-            width: min(520px, calc(100% - 32px));
+            width: min(1036px, calc(100% - 32px));
             padding: 28px;
             border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 16px;
@@ -37,13 +37,17 @@
         }
 
         p {
-            margin: 0 0 22px;
+            margin: 0 auto 22px;
             color: rgba(255, 255, 255, 0.72);
             line-height: 1.5;
         }
 
+        main > p {
+            max-width: 464px;
+        }
+
         button {
-            width: 100%;
+            width: min(464px, 100%);
             padding: 14px 20px;
             border: 0;
             border-radius: 10px;
@@ -72,19 +76,22 @@
             font-weight: 700;
         }
 
-        .emerald-preview {
+        .emerald-preview,
+        .team-preview {
             margin-top: 26px;
             padding-top: 24px;
             border-top: 1px solid rgba(255, 255, 255, 0.14);
             text-align: left;
         }
 
-        .emerald-preview h2 {
+        .emerald-preview h2,
+        .team-preview h2 {
             margin: 0 0 6px;
             font-size: 18px;
         }
 
-        .emerald-preview p {
+        .emerald-preview p,
+        .team-preview p {
             margin-bottom: 12px;
             font-size: 13px;
         }
@@ -93,6 +100,14 @@
             display: block;
             width: 100%;
             height: 700px;
+            border: 0;
+            background: transparent;
+        }
+
+        .team-preview iframe {
+            display: block;
+            width: 100%;
+            height: 140px;
             border: 0;
             background: transparent;
         }
@@ -112,6 +127,15 @@
             <iframe
                 src="/emerald.html?preview=max-encounters"
                 title="Aperçu de la liste de rencontres la plus haute"
+            ></iframe>
+        </section>
+
+        <section class="team-preview">
+            <h2>Aperçu de l’équipe en direct</h2>
+            <p>Actualise cette page pour obtenir entre 1 et 6 Pokémon aléatoires. Leurs deux frames s’animent pendant 5 secondes, puis restent fixes pendant 25 secondes.</p>
+            <iframe
+                src="/team.html?preview"
+                title="Aperçu de l’équipe Pokémon"
             ></iframe>
         </section>
     </main>

@@ -6,6 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "test:team": "node scripts/check-team.js",
     "test:translations": "node scripts/check-translations.js"
   },
   "engines": {"node": ">=18"},
