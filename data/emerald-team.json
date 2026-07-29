@@ -1,0 +1,2326 @@
+{
+  "generatedFrom": "pret/pokeemerald et PokéAPI",
+  "species": {
+    "1": {
+      "internalId": 1,
+      "dexNumber": 1,
+      "name": "Bulbizarre",
+      "sprite": "/assets/pokemon/1.png"
+    },
+    "2": {
+      "internalId": 2,
+      "dexNumber": 2,
+      "name": "Herbizarre",
+      "sprite": "/assets/pokemon/2.png"
+    },
+    "3": {
+      "internalId": 3,
+      "dexNumber": 3,
+      "name": "Florizarre",
+      "sprite": "/assets/pokemon/3.png"
+    },
+    "4": {
+      "internalId": 4,
+      "dexNumber": 4,
+      "name": "Salamèche",
+      "sprite": "/assets/pokemon/4.png"
+    },
+    "5": {
+      "internalId": 5,
+      "dexNumber": 5,
+      "name": "Reptincel",
+      "sprite": "/assets/pokemon/5.png"
+    },
+    "6": {
+      "internalId": 6,
+      "dexNumber": 6,
+      "name": "Dracaufeu",
+      "sprite": "/assets/pokemon/6.png"
+    },
+    "7": {
+      "internalId": 7,
+      "dexNumber": 7,
+      "name": "Carapuce",
+      "sprite": "/assets/pokemon/7.png"
+    },
+    "8": {
+      "internalId": 8,
+      "dexNumber": 8,
+      "name": "Carabaffe",
+      "sprite": "/assets/pokemon/8.png"
+    },
+    "9": {
+      "internalId": 9,
+      "dexNumber": 9,
+      "name": "Tortank",
+      "sprite": "/assets/pokemon/9.png"
+    },
+    "10": {
+      "internalId": 10,
+      "dexNumber": 10,
+      "name": "Chenipan",
+      "sprite": "/assets/pokemon/10.png"
+    },
+    "11": {
+      "internalId": 11,
+      "dexNumber": 11,
+      "name": "Chrysacier",
+      "sprite": "/assets/pokemon/11.png"
+    },
+    "12": {
+      "internalId": 12,
+      "dexNumber": 12,
+      "name": "Papilusion",
+      "sprite": "/assets/pokemon/12.png"
+    },
+    "13": {
+      "internalId": 13,
+      "dexNumber": 13,
+      "name": "Aspicot",
+      "sprite": "/assets/pokemon/13.png"
+    },
+    "14": {
+      "internalId": 14,
+      "dexNumber": 14,
+      "name": "Coconfort",
+      "sprite": "/assets/pokemon/14.png"
+    },
+    "15": {
+      "internalId": 15,
+      "dexNumber": 15,
+      "name": "Dardargnan",
+      "sprite": "/assets/pokemon/15.png"
+    },
+    "16": {
+      "internalId": 16,
+      "dexNumber": 16,
+      "name": "Roucool",
+      "sprite": "/assets/pokemon/16.png"
+    },
+    "17": {
+      "internalId": 17,
+      "dexNumber": 17,
+      "name": "Roucoups",
+      "sprite": "/assets/pokemon/17.png"
+    },
+    "18": {
+      "internalId": 18,
+      "dexNumber": 18,
+      "name": "Roucarnage",
+      "sprite": "/assets/pokemon/18.png"
+    },
+    "19": {
+      "internalId": 19,
+      "dexNumber": 19,
+      "name": "Rattata",
+      "sprite": "/assets/pokemon/19.png"
+    },
+    "20": {
+      "internalId": 20,
+      "dexNumber": 20,
+      "name": "Rattatac",
+      "sprite": "/assets/pokemon/20.png"
+    },
+    "21": {
+      "internalId": 21,
+      "dexNumber": 21,
+      "name": "Piafabec",
+      "sprite": "/assets/pokemon/21.png"
+    },
+    "22": {
+      "internalId": 22,
+      "dexNumber": 22,
+      "name": "Rapasdepic",
+      "sprite": "/assets/pokemon/22.png"
+    },
+    "23": {
+      "internalId": 23,
+      "dexNumber": 23,
+      "name": "Abo",
+      "sprite": "/assets/pokemon/23.png"
+    },
+    "24": {
+      "internalId": 24,
+      "dexNumber": 24,
+      "name": "Arbok",
+      "sprite": "/assets/pokemon/24.png"
+    },
+    "25": {
+      "internalId": 25,
+      "dexNumber": 25,
+      "name": "Pikachu",
+      "sprite": "/assets/pokemon/25.png"
+    },
+    "26": {
+      "internalId": 26,
+      "dexNumber": 26,
+      "name": "Raichu",
+      "sprite": "/assets/pokemon/26.png"
+    },
+    "27": {
+      "internalId": 27,
+      "dexNumber": 27,
+      "name": "Sabelette",
+      "sprite": "/assets/pokemon/27.png"
+    },
+    "28": {
+      "internalId": 28,
+      "dexNumber": 28,
+      "name": "Sablaireau",
+      "sprite": "/assets/pokemon/28.png"
+    },
+    "29": {
+      "internalId": 29,
+      "dexNumber": 29,
+      "name": "Nidoran♀",
+      "sprite": "/assets/pokemon/29.png"
+    },
+    "30": {
+      "internalId": 30,
+      "dexNumber": 30,
+      "name": "Nidorina",
+      "sprite": "/assets/pokemon/30.png"
+    },
+    "31": {
+      "internalId": 31,
+      "dexNumber": 31,
+      "name": "Nidoqueen",
+      "sprite": "/assets/pokemon/31.png"
+    },
+    "32": {
+      "internalId": 32,
+      "dexNumber": 32,
+      "name": "Nidoran♂",
+      "sprite": "/assets/pokemon/32.png"
+    },
+    "33": {
+      "internalId": 33,
+      "dexNumber": 33,
+      "name": "Nidorino",
+      "sprite": "/assets/pokemon/33.png"
+    },
+    "34": {
+      "internalId": 34,
+      "dexNumber": 34,
+      "name": "Nidoking",
+      "sprite": "/assets/pokemon/34.png"
+    },
+    "35": {
+      "internalId": 35,
+      "dexNumber": 35,
+      "name": "Mélofée",
+      "sprite": "/assets/pokemon/35.png"
+    },
+    "36": {
+      "internalId": 36,
+      "dexNumber": 36,
+      "name": "Mélodelfe",
+      "sprite": "/assets/pokemon/36.png"
+    },
+    "37": {
+      "internalId": 37,
+      "dexNumber": 37,
+      "name": "Goupix",
+      "sprite": "/assets/pokemon/37.png"
+    },
+    "38": {
+      "internalId": 38,
+      "dexNumber": 38,
+      "name": "Feunard",
+      "sprite": "/assets/pokemon/38.png"
+    },
+    "39": {
+      "internalId": 39,
+      "dexNumber": 39,
+      "name": "Rondoudou",
+      "sprite": "/assets/pokemon/39.png"
+    },
+    "40": {
+      "internalId": 40,
+      "dexNumber": 40,
+      "name": "Grodoudou",
+      "sprite": "/assets/pokemon/40.png"
+    },
+    "41": {
+      "internalId": 41,
+      "dexNumber": 41,
+      "name": "Nosferapti",
+      "sprite": "/assets/pokemon/41.png"
+    },
+    "42": {
+      "internalId": 42,
+      "dexNumber": 42,
+      "name": "Nosferalto",
+      "sprite": "/assets/pokemon/42.png"
+    },
+    "43": {
+      "internalId": 43,
+      "dexNumber": 43,
+      "name": "Mystherbe",
+      "sprite": "/assets/pokemon/43.png"
+    },
+    "44": {
+      "internalId": 44,
+      "dexNumber": 44,
+      "name": "Ortide",
+      "sprite": "/assets/pokemon/44.png"
+    },
+    "45": {
+      "internalId": 45,
+      "dexNumber": 45,
+      "name": "Rafflesia",
+      "sprite": "/assets/pokemon/45.png"
+    },
+    "46": {
+      "internalId": 46,
+      "dexNumber": 46,
+      "name": "Paras",
+      "sprite": "/assets/pokemon/46.png"
+    },
+    "47": {
+      "internalId": 47,
+      "dexNumber": 47,
+      "name": "Parasect",
+      "sprite": "/assets/pokemon/47.png"
+    },
+    "48": {
+      "internalId": 48,
+      "dexNumber": 48,
+      "name": "Mimitoss",
+      "sprite": "/assets/pokemon/48.png"
+    },
+    "49": {
+      "internalId": 49,
+      "dexNumber": 49,
+      "name": "Aéromite",
+      "sprite": "/assets/pokemon/49.png"
+    },
+    "50": {
+      "internalId": 50,
+      "dexNumber": 50,
+      "name": "Taupiqueur",
+      "sprite": "/assets/pokemon/50.png"
+    },
+    "51": {
+      "internalId": 51,
+      "dexNumber": 51,
+      "name": "Triopikeur",
+      "sprite": "/assets/pokemon/51.png"
+    },
+    "52": {
+      "internalId": 52,
+      "dexNumber": 52,
+      "name": "Miaouss",
+      "sprite": "/assets/pokemon/52.png"
+    },
+    "53": {
+      "internalId": 53,
+      "dexNumber": 53,
+      "name": "Persian",
+      "sprite": "/assets/pokemon/53.png"
+    },
+    "54": {
+      "internalId": 54,
+      "dexNumber": 54,
+      "name": "Psykokwak",
+      "sprite": "/assets/pokemon/54.png"
+    },
+    "55": {
+      "internalId": 55,
+      "dexNumber": 55,
+      "name": "Akwakwak",
+      "sprite": "/assets/pokemon/55.png"
+    },
+    "56": {
+      "internalId": 56,
+      "dexNumber": 56,
+      "name": "Férosinge",
+      "sprite": "/assets/pokemon/56.png"
+    },
+    "57": {
+      "internalId": 57,
+      "dexNumber": 57,
+      "name": "Colossinge",
+      "sprite": "/assets/pokemon/57.png"
+    },
+    "58": {
+      "internalId": 58,
+      "dexNumber": 58,
+      "name": "Caninos",
+      "sprite": "/assets/pokemon/58.png"
+    },
+    "59": {
+      "internalId": 59,
+      "dexNumber": 59,
+      "name": "Arcanin",
+      "sprite": "/assets/pokemon/59.png"
+    },
+    "60": {
+      "internalId": 60,
+      "dexNumber": 60,
+      "name": "Ptitard",
+      "sprite": "/assets/pokemon/60.png"
+    },
+    "61": {
+      "internalId": 61,
+      "dexNumber": 61,
+      "name": "Têtarte",
+      "sprite": "/assets/pokemon/61.png"
+    },
+    "62": {
+      "internalId": 62,
+      "dexNumber": 62,
+      "name": "Tartard",
+      "sprite": "/assets/pokemon/62.png"
+    },
+    "63": {
+      "internalId": 63,
+      "dexNumber": 63,
+      "name": "Abra",
+      "sprite": "/assets/pokemon/63.png"
+    },
+    "64": {
+      "internalId": 64,
+      "dexNumber": 64,
+      "name": "Kadabra",
+      "sprite": "/assets/pokemon/64.png"
+    },
+    "65": {
+      "internalId": 65,
+      "dexNumber": 65,
+      "name": "Alakazam",
+      "sprite": "/assets/pokemon/65.png"
+    },
+    "66": {
+      "internalId": 66,
+      "dexNumber": 66,
+      "name": "Machoc",
+      "sprite": "/assets/pokemon/66.png"
+    },
+    "67": {
+      "internalId": 67,
+      "dexNumber": 67,
+      "name": "Machopeur",
+      "sprite": "/assets/pokemon/67.png"
+    },
+    "68": {
+      "internalId": 68,
+      "dexNumber": 68,
+      "name": "Mackogneur",
+      "sprite": "/assets/pokemon/68.png"
+    },
+    "69": {
+      "internalId": 69,
+      "dexNumber": 69,
+      "name": "Chétiflor",
+      "sprite": "/assets/pokemon/69.png"
+    },
+    "70": {
+      "internalId": 70,
+      "dexNumber": 70,
+      "name": "Boustiflor",
+      "sprite": "/assets/pokemon/70.png"
+    },
+    "71": {
+      "internalId": 71,
+      "dexNumber": 71,
+      "name": "Empiflor",
+      "sprite": "/assets/pokemon/71.png"
+    },
+    "72": {
+      "internalId": 72,
+      "dexNumber": 72,
+      "name": "Tentacool",
+      "sprite": "/assets/pokemon/72.png"
+    },
+    "73": {
+      "internalId": 73,
+      "dexNumber": 73,
+      "name": "Tentacruel",
+      "sprite": "/assets/pokemon/73.png"
+    },
+    "74": {
+      "internalId": 74,
+      "dexNumber": 74,
+      "name": "Racaillou",
+      "sprite": "/assets/pokemon/74.png"
+    },
+    "75": {
+      "internalId": 75,
+      "dexNumber": 75,
+      "name": "Gravalanch",
+      "sprite": "/assets/pokemon/75.png"
+    },
+    "76": {
+      "internalId": 76,
+      "dexNumber": 76,
+      "name": "Grolem",
+      "sprite": "/assets/pokemon/76.png"
+    },
+    "77": {
+      "internalId": 77,
+      "dexNumber": 77,
+      "name": "Ponyta",
+      "sprite": "/assets/pokemon/77.png"
+    },
+    "78": {
+      "internalId": 78,
+      "dexNumber": 78,
+      "name": "Galopa",
+      "sprite": "/assets/pokemon/78.png"
+    },
+    "79": {
+      "internalId": 79,
+      "dexNumber": 79,
+      "name": "Ramoloss",
+      "sprite": "/assets/pokemon/79.png"
+    },
+    "80": {
+      "internalId": 80,
+      "dexNumber": 80,
+      "name": "Flagadoss",
+      "sprite": "/assets/pokemon/80.png"
+    },
+    "81": {
+      "internalId": 81,
+      "dexNumber": 81,
+      "name": "Magnéti",
+      "sprite": "/assets/pokemon/81.png"
+    },
+    "82": {
+      "internalId": 82,
+      "dexNumber": 82,
+      "name": "Magnéton",
+      "sprite": "/assets/pokemon/82.png"
+    },
+    "83": {
+      "internalId": 83,
+      "dexNumber": 83,
+      "name": "Canarticho",
+      "sprite": "/assets/pokemon/83.png"
+    },
+    "84": {
+      "internalId": 84,
+      "dexNumber": 84,
+      "name": "Doduo",
+      "sprite": "/assets/pokemon/84.png"
+    },
+    "85": {
+      "internalId": 85,
+      "dexNumber": 85,
+      "name": "Dodrio",
+      "sprite": "/assets/pokemon/85.png"
+    },
+    "86": {
+      "internalId": 86,
+      "dexNumber": 86,
+      "name": "Otaria",
+      "sprite": "/assets/pokemon/86.png"
+    },
+    "87": {
+      "internalId": 87,
+      "dexNumber": 87,
+      "name": "Lamantine",
+      "sprite": "/assets/pokemon/87.png"
+    },
+    "88": {
+      "internalId": 88,
+      "dexNumber": 88,
+      "name": "Tadmorv",
+      "sprite": "/assets/pokemon/88.png"
+    },
+    "89": {
+      "internalId": 89,
+      "dexNumber": 89,
+      "name": "Grotadmorv",
+      "sprite": "/assets/pokemon/89.png"
+    },
+    "90": {
+      "internalId": 90,
+      "dexNumber": 90,
+      "name": "Kokiyas",
+      "sprite": "/assets/pokemon/90.png"
+    },
+    "91": {
+      "internalId": 91,
+      "dexNumber": 91,
+      "name": "Crustabri",
+      "sprite": "/assets/pokemon/91.png"
+    },
+    "92": {
+      "internalId": 92,
+      "dexNumber": 92,
+      "name": "Fantominus",
+      "sprite": "/assets/pokemon/92.png"
+    },
+    "93": {
+      "internalId": 93,
+      "dexNumber": 93,
+      "name": "Spectrum",
+      "sprite": "/assets/pokemon/93.png"
+    },
+    "94": {
+      "internalId": 94,
+      "dexNumber": 94,
+      "name": "Ectoplasma",
+      "sprite": "/assets/pokemon/94.png"
+    },
+    "95": {
+      "internalId": 95,
+      "dexNumber": 95,
+      "name": "Onix",
+      "sprite": "/assets/pokemon/95.png"
+    },
+    "96": {
+      "internalId": 96,
+      "dexNumber": 96,
+      "name": "Soporifik",
+      "sprite": "/assets/pokemon/96.png"
+    },
+    "97": {
+      "internalId": 97,
+      "dexNumber": 97,
+      "name": "Hypnomade",
+      "sprite": "/assets/pokemon/97.png"
+    },
+    "98": {
+      "internalId": 98,
+      "dexNumber": 98,
+      "name": "Krabby",
+      "sprite": "/assets/pokemon/98.png"
+    },
+    "99": {
+      "internalId": 99,
+      "dexNumber": 99,
+      "name": "Krabboss",
+      "sprite": "/assets/pokemon/99.png"
+    },
+    "100": {
+      "internalId": 100,
+      "dexNumber": 100,
+      "name": "Voltorbe",
+      "sprite": "/assets/pokemon/100.png"
+    },
+    "101": {
+      "internalId": 101,
+      "dexNumber": 101,
+      "name": "Électrode",
+      "sprite": "/assets/pokemon/101.png"
+    },
+    "102": {
+      "internalId": 102,
+      "dexNumber": 102,
+      "name": "Noeunoeuf",
+      "sprite": "/assets/pokemon/102.png"
+    },
+    "103": {
+      "internalId": 103,
+      "dexNumber": 103,
+      "name": "Noadkoko",
+      "sprite": "/assets/pokemon/103.png"
+    },
+    "104": {
+      "internalId": 104,
+      "dexNumber": 104,
+      "name": "Osselait",
+      "sprite": "/assets/pokemon/104.png"
+    },
+    "105": {
+      "internalId": 105,
+      "dexNumber": 105,
+      "name": "Ossatueur",
+      "sprite": "/assets/pokemon/105.png"
+    },
+    "106": {
+      "internalId": 106,
+      "dexNumber": 106,
+      "name": "Kicklee",
+      "sprite": "/assets/pokemon/106.png"
+    },
+    "107": {
+      "internalId": 107,
+      "dexNumber": 107,
+      "name": "Tygnon",
+      "sprite": "/assets/pokemon/107.png"
+    },
+    "108": {
+      "internalId": 108,
+      "dexNumber": 108,
+      "name": "Excelangue",
+      "sprite": "/assets/pokemon/108.png"
+    },
+    "109": {
+      "internalId": 109,
+      "dexNumber": 109,
+      "name": "Smogo",
+      "sprite": "/assets/pokemon/109.png"
+    },
+    "110": {
+      "internalId": 110,
+      "dexNumber": 110,
+      "name": "Smogogo",
+      "sprite": "/assets/pokemon/110.png"
+    },
+    "111": {
+      "internalId": 111,
+      "dexNumber": 111,
+      "name": "Rhinocorne",
+      "sprite": "/assets/pokemon/111.png"
+    },
+    "112": {
+      "internalId": 112,
+      "dexNumber": 112,
+      "name": "Rhinoféros",
+      "sprite": "/assets/pokemon/112.png"
+    },
+    "113": {
+      "internalId": 113,
+      "dexNumber": 113,
+      "name": "Leveinard",
+      "sprite": "/assets/pokemon/113.png"
+    },
+    "114": {
+      "internalId": 114,
+      "dexNumber": 114,
+      "name": "Saquedeneu",
+      "sprite": "/assets/pokemon/114.png"
+    },
+    "115": {
+      "internalId": 115,
+      "dexNumber": 115,
+      "name": "Kangourex",
+      "sprite": "/assets/pokemon/115.png"
+    },
+    "116": {
+      "internalId": 116,
+      "dexNumber": 116,
+      "name": "Hypotrempe",
+      "sprite": "/assets/pokemon/116.png"
+    },
+    "117": {
+      "internalId": 117,
+      "dexNumber": 117,
+      "name": "Hypocéan",
+      "sprite": "/assets/pokemon/117.png"
+    },
+    "118": {
+      "internalId": 118,
+      "dexNumber": 118,
+      "name": "Poissirène",
+      "sprite": "/assets/pokemon/118.png"
+    },
+    "119": {
+      "internalId": 119,
+      "dexNumber": 119,
+      "name": "Poissoroy",
+      "sprite": "/assets/pokemon/119.png"
+    },
+    "120": {
+      "internalId": 120,
+      "dexNumber": 120,
+      "name": "Stari",
+      "sprite": "/assets/pokemon/120.png"
+    },
+    "121": {
+      "internalId": 121,
+      "dexNumber": 121,
+      "name": "Staross",
+      "sprite": "/assets/pokemon/121.png"
+    },
+    "122": {
+      "internalId": 122,
+      "dexNumber": 122,
+      "name": "M. Mime",
+      "sprite": "/assets/pokemon/122.png"
+    },
+    "123": {
+      "internalId": 123,
+      "dexNumber": 123,
+      "name": "Insécateur",
+      "sprite": "/assets/pokemon/123.png"
+    },
+    "124": {
+      "internalId": 124,
+      "dexNumber": 124,
+      "name": "Lippoutou",
+      "sprite": "/assets/pokemon/124.png"
+    },
+    "125": {
+      "internalId": 125,
+      "dexNumber": 125,
+      "name": "Élektek",
+      "sprite": "/assets/pokemon/125.png"
+    },
+    "126": {
+      "internalId": 126,
+      "dexNumber": 126,
+      "name": "Magmar",
+      "sprite": "/assets/pokemon/126.png"
+    },
+    "127": {
+      "internalId": 127,
+      "dexNumber": 127,
+      "name": "Scarabrute",
+      "sprite": "/assets/pokemon/127.png"
+    },
+    "128": {
+      "internalId": 128,
+      "dexNumber": 128,
+      "name": "Tauros",
+      "sprite": "/assets/pokemon/128.png"
+    },
+    "129": {
+      "internalId": 129,
+      "dexNumber": 129,
+      "name": "Magicarpe",
+      "sprite": "/assets/pokemon/129.png"
+    },
+    "130": {
+      "internalId": 130,
+      "dexNumber": 130,
+      "name": "Léviator",
+      "sprite": "/assets/pokemon/130.png"
+    },
+    "131": {
+      "internalId": 131,
+      "dexNumber": 131,
+      "name": "Lokhlass",
+      "sprite": "/assets/pokemon/131.png"
+    },
+    "132": {
+      "internalId": 132,
+      "dexNumber": 132,
+      "name": "Métamorph",
+      "sprite": "/assets/pokemon/132.png"
+    },
+    "133": {
+      "internalId": 133,
+      "dexNumber": 133,
+      "name": "Évoli",
+      "sprite": "/assets/pokemon/133.png"
+    },
+    "134": {
+      "internalId": 134,
+      "dexNumber": 134,
+      "name": "Aquali",
+      "sprite": "/assets/pokemon/134.png"
+    },
+    "135": {
+      "internalId": 135,
+      "dexNumber": 135,
+      "name": "Voltali",
+      "sprite": "/assets/pokemon/135.png"
+    },
+    "136": {
+      "internalId": 136,
+      "dexNumber": 136,
+      "name": "Pyroli",
+      "sprite": "/assets/pokemon/136.png"
+    },
+    "137": {
+      "internalId": 137,
+      "dexNumber": 137,
+      "name": "Porygon",
+      "sprite": "/assets/pokemon/137.png"
+    },
+    "138": {
+      "internalId": 138,
+      "dexNumber": 138,
+      "name": "Amonita",
+      "sprite": "/assets/pokemon/138.png"
+    },
+    "139": {
+      "internalId": 139,
+      "dexNumber": 139,
+      "name": "Amonistar",
+      "sprite": "/assets/pokemon/139.png"
+    },
+    "140": {
+      "internalId": 140,
+      "dexNumber": 140,
+      "name": "Kabuto",
+      "sprite": "/assets/pokemon/140.png"
+    },
+    "141": {
+      "internalId": 141,
+      "dexNumber": 141,
+      "name": "Kabutops",
+      "sprite": "/assets/pokemon/141.png"
+    },
+    "142": {
+      "internalId": 142,
+      "dexNumber": 142,
+      "name": "Ptéra",
+      "sprite": "/assets/pokemon/142.png"
+    },
+    "143": {
+      "internalId": 143,
+      "dexNumber": 143,
+      "name": "Ronflex",
+      "sprite": "/assets/pokemon/143.png"
+    },
+    "144": {
+      "internalId": 144,
+      "dexNumber": 144,
+      "name": "Artikodin",
+      "sprite": "/assets/pokemon/144.png"
+    },
+    "145": {
+      "internalId": 145,
+      "dexNumber": 145,
+      "name": "Électhor",
+      "sprite": "/assets/pokemon/145.png"
+    },
+    "146": {
+      "internalId": 146,
+      "dexNumber": 146,
+      "name": "Sulfura",
+      "sprite": "/assets/pokemon/146.png"
+    },
+    "147": {
+      "internalId": 147,
+      "dexNumber": 147,
+      "name": "Minidraco",
+      "sprite": "/assets/pokemon/147.png"
+    },
+    "148": {
+      "internalId": 148,
+      "dexNumber": 148,
+      "name": "Draco",
+      "sprite": "/assets/pokemon/148.png"
+    },
+    "149": {
+      "internalId": 149,
+      "dexNumber": 149,
+      "name": "Dracolosse",
+      "sprite": "/assets/pokemon/149.png"
+    },
+    "150": {
+      "internalId": 150,
+      "dexNumber": 150,
+      "name": "Mewtwo",
+      "sprite": "/assets/pokemon/150.png"
+    },
+    "151": {
+      "internalId": 151,
+      "dexNumber": 151,
+      "name": "Mew",
+      "sprite": "/assets/pokemon/151.png"
+    },
+    "152": {
+      "internalId": 152,
+      "dexNumber": 152,
+      "name": "Germignon",
+      "sprite": "/assets/pokemon/152.png"
+    },
+    "153": {
+      "internalId": 153,
+      "dexNumber": 153,
+      "name": "Macronium",
+      "sprite": "/assets/pokemon/153.png"
+    },
+    "154": {
+      "internalId": 154,
+      "dexNumber": 154,
+      "name": "Méganium",
+      "sprite": "/assets/pokemon/154.png"
+    },
+    "155": {
+      "internalId": 155,
+      "dexNumber": 155,
+      "name": "Héricendre",
+      "sprite": "/assets/pokemon/155.png"
+    },
+    "156": {
+      "internalId": 156,
+      "dexNumber": 156,
+      "name": "Feurisson",
+      "sprite": "/assets/pokemon/156.png"
+    },
+    "157": {
+      "internalId": 157,
+      "dexNumber": 157,
+      "name": "Typhlosion",
+      "sprite": "/assets/pokemon/157.png"
+    },
+    "158": {
+      "internalId": 158,
+      "dexNumber": 158,
+      "name": "Kaiminus",
+      "sprite": "/assets/pokemon/158.png"
+    },
+    "159": {
+      "internalId": 159,
+      "dexNumber": 159,
+      "name": "Crocrodil",
+      "sprite": "/assets/pokemon/159.png"
+    },
+    "160": {
+      "internalId": 160,
+      "dexNumber": 160,
+      "name": "Aligatueur",
+      "sprite": "/assets/pokemon/160.png"
+    },
+    "161": {
+      "internalId": 161,
+      "dexNumber": 161,
+      "name": "Fouinette",
+      "sprite": "/assets/pokemon/161.png"
+    },
+    "162": {
+      "internalId": 162,
+      "dexNumber": 162,
+      "name": "Fouinar",
+      "sprite": "/assets/pokemon/162.png"
+    },
+    "163": {
+      "internalId": 163,
+      "dexNumber": 163,
+      "name": "Hoothoot",
+      "sprite": "/assets/pokemon/163.png"
+    },
+    "164": {
+      "internalId": 164,
+      "dexNumber": 164,
+      "name": "Noarfang",
+      "sprite": "/assets/pokemon/164.png"
+    },
+    "165": {
+      "internalId": 165,
+      "dexNumber": 165,
+      "name": "Coxy",
+      "sprite": "/assets/pokemon/165.png"
+    },
+    "166": {
+      "internalId": 166,
+      "dexNumber": 166,
+      "name": "Coxyclaque",
+      "sprite": "/assets/pokemon/166.png"
+    },
+    "167": {
+      "internalId": 167,
+      "dexNumber": 167,
+      "name": "Mimigal",
+      "sprite": "/assets/pokemon/167.png"
+    },
+    "168": {
+      "internalId": 168,
+      "dexNumber": 168,
+      "name": "Migalos",
+      "sprite": "/assets/pokemon/168.png"
+    },
+    "169": {
+      "internalId": 169,
+      "dexNumber": 169,
+      "name": "Nostenfer",
+      "sprite": "/assets/pokemon/169.png"
+    },
+    "170": {
+      "internalId": 170,
+      "dexNumber": 170,
+      "name": "Loupio",
+      "sprite": "/assets/pokemon/170.png"
+    },
+    "171": {
+      "internalId": 171,
+      "dexNumber": 171,
+      "name": "Lanturn",
+      "sprite": "/assets/pokemon/171.png"
+    },
+    "172": {
+      "internalId": 172,
+      "dexNumber": 172,
+      "name": "Pichu",
+      "sprite": "/assets/pokemon/172.png"
+    },
+    "173": {
+      "internalId": 173,
+      "dexNumber": 173,
+      "name": "Mélo",
+      "sprite": "/assets/pokemon/173.png"
+    },
+    "174": {
+      "internalId": 174,
+      "dexNumber": 174,
+      "name": "Toudoudou",
+      "sprite": "/assets/pokemon/174.png"
+    },
+    "175": {
+      "internalId": 175,
+      "dexNumber": 175,
+      "name": "Togepi",
+      "sprite": "/assets/pokemon/175.png"
+    },
+    "176": {
+      "internalId": 176,
+      "dexNumber": 176,
+      "name": "Togetic",
+      "sprite": "/assets/pokemon/176.png"
+    },
+    "177": {
+      "internalId": 177,
+      "dexNumber": 177,
+      "name": "Natu",
+      "sprite": "/assets/pokemon/177.png"
+    },
+    "178": {
+      "internalId": 178,
+      "dexNumber": 178,
+      "name": "Xatu",
+      "sprite": "/assets/pokemon/178.png"
+    },
+    "179": {
+      "internalId": 179,
+      "dexNumber": 179,
+      "name": "Wattouat",
+      "sprite": "/assets/pokemon/179.png"
+    },
+    "180": {
+      "internalId": 180,
+      "dexNumber": 180,
+      "name": "Lainergie",
+      "sprite": "/assets/pokemon/180.png"
+    },
+    "181": {
+      "internalId": 181,
+      "dexNumber": 181,
+      "name": "Pharamp",
+      "sprite": "/assets/pokemon/181.png"
+    },
+    "182": {
+      "internalId": 182,
+      "dexNumber": 182,
+      "name": "Joliflor",
+      "sprite": "/assets/pokemon/182.png"
+    },
+    "183": {
+      "internalId": 183,
+      "dexNumber": 183,
+      "name": "Marill",
+      "sprite": "/assets/pokemon/183.png"
+    },
+    "184": {
+      "internalId": 184,
+      "dexNumber": 184,
+      "name": "Azumarill",
+      "sprite": "/assets/pokemon/184.png"
+    },
+    "185": {
+      "internalId": 185,
+      "dexNumber": 185,
+      "name": "Simularbre",
+      "sprite": "/assets/pokemon/185.png"
+    },
+    "186": {
+      "internalId": 186,
+      "dexNumber": 186,
+      "name": "Tarpaud",
+      "sprite": "/assets/pokemon/186.png"
+    },
+    "187": {
+      "internalId": 187,
+      "dexNumber": 187,
+      "name": "Granivol",
+      "sprite": "/assets/pokemon/187.png"
+    },
+    "188": {
+      "internalId": 188,
+      "dexNumber": 188,
+      "name": "Floravol",
+      "sprite": "/assets/pokemon/188.png"
+    },
+    "189": {
+      "internalId": 189,
+      "dexNumber": 189,
+      "name": "Cotovol",
+      "sprite": "/assets/pokemon/189.png"
+    },
+    "190": {
+      "internalId": 190,
+      "dexNumber": 190,
+      "name": "Capumain",
+      "sprite": "/assets/pokemon/190.png"
+    },
+    "191": {
+      "internalId": 191,
+      "dexNumber": 191,
+      "name": "Tournegrin",
+      "sprite": "/assets/pokemon/191.png"
+    },
+    "192": {
+      "internalId": 192,
+      "dexNumber": 192,
+      "name": "Héliatronc",
+      "sprite": "/assets/pokemon/192.png"
+    },
+    "193": {
+      "internalId": 193,
+      "dexNumber": 193,
+      "name": "Yanma",
+      "sprite": "/assets/pokemon/193.png"
+    },
+    "194": {
+      "internalId": 194,
+      "dexNumber": 194,
+      "name": "Axoloto",
+      "sprite": "/assets/pokemon/194.png"
+    },
+    "195": {
+      "internalId": 195,
+      "dexNumber": 195,
+      "name": "Maraiste",
+      "sprite": "/assets/pokemon/195.png"
+    },
+    "196": {
+      "internalId": 196,
+      "dexNumber": 196,
+      "name": "Mentali",
+      "sprite": "/assets/pokemon/196.png"
+    },
+    "197": {
+      "internalId": 197,
+      "dexNumber": 197,
+      "name": "Noctali",
+      "sprite": "/assets/pokemon/197.png"
+    },
+    "198": {
+      "internalId": 198,
+      "dexNumber": 198,
+      "name": "Cornèbre",
+      "sprite": "/assets/pokemon/198.png"
+    },
+    "199": {
+      "internalId": 199,
+      "dexNumber": 199,
+      "name": "Roigada",
+      "sprite": "/assets/pokemon/199.png"
+    },
+    "200": {
+      "internalId": 200,
+      "dexNumber": 200,
+      "name": "Feuforêve",
+      "sprite": "/assets/pokemon/200.png"
+    },
+    "201": {
+      "internalId": 201,
+      "dexNumber": 201,
+      "name": "Zarbi",
+      "sprite": "/assets/pokemon/201.png"
+    },
+    "202": {
+      "internalId": 202,
+      "dexNumber": 202,
+      "name": "Qulbutoké",
+      "sprite": "/assets/pokemon/202.png"
+    },
+    "203": {
+      "internalId": 203,
+      "dexNumber": 203,
+      "name": "Girafarig",
+      "sprite": "/assets/pokemon/203.png"
+    },
+    "204": {
+      "internalId": 204,
+      "dexNumber": 204,
+      "name": "Pomdepik",
+      "sprite": "/assets/pokemon/204.png"
+    },
+    "205": {
+      "internalId": 205,
+      "dexNumber": 205,
+      "name": "Foretress",
+      "sprite": "/assets/pokemon/205.png"
+    },
+    "206": {
+      "internalId": 206,
+      "dexNumber": 206,
+      "name": "Insolourdo",
+      "sprite": "/assets/pokemon/206.png"
+    },
+    "207": {
+      "internalId": 207,
+      "dexNumber": 207,
+      "name": "Scorplane",
+      "sprite": "/assets/pokemon/207.png"
+    },
+    "208": {
+      "internalId": 208,
+      "dexNumber": 208,
+      "name": "Steelix",
+      "sprite": "/assets/pokemon/208.png"
+    },
+    "209": {
+      "internalId": 209,
+      "dexNumber": 209,
+      "name": "Snubbull",
+      "sprite": "/assets/pokemon/209.png"
+    },
+    "210": {
+      "internalId": 210,
+      "dexNumber": 210,
+      "name": "Granbull",
+      "sprite": "/assets/pokemon/210.png"
+    },
+    "211": {
+      "internalId": 211,
+      "dexNumber": 211,
+      "name": "Qwilfish",
+      "sprite": "/assets/pokemon/211.png"
+    },
+    "212": {
+      "internalId": 212,
+      "dexNumber": 212,
+      "name": "Cizayox",
+      "sprite": "/assets/pokemon/212.png"
+    },
+    "213": {
+      "internalId": 213,
+      "dexNumber": 213,
+      "name": "Caratroc",
+      "sprite": "/assets/pokemon/213.png"
+    },
+    "214": {
+      "internalId": 214,
+      "dexNumber": 214,
+      "name": "Scarhino",
+      "sprite": "/assets/pokemon/214.png"
+    },
+    "215": {
+      "internalId": 215,
+      "dexNumber": 215,
+      "name": "Farfuret",
+      "sprite": "/assets/pokemon/215.png"
+    },
+    "216": {
+      "internalId": 216,
+      "dexNumber": 216,
+      "name": "Teddiursa",
+      "sprite": "/assets/pokemon/216.png"
+    },
+    "217": {
+      "internalId": 217,
+      "dexNumber": 217,
+      "name": "Ursaring",
+      "sprite": "/assets/pokemon/217.png"
+    },
+    "218": {
+      "internalId": 218,
+      "dexNumber": 218,
+      "name": "Limagma",
+      "sprite": "/assets/pokemon/218.png"
+    },
+    "219": {
+      "internalId": 219,
+      "dexNumber": 219,
+      "name": "Volcaropod",
+      "sprite": "/assets/pokemon/219.png"
+    },
+    "220": {
+      "internalId": 220,
+      "dexNumber": 220,
+      "name": "Marcacrin",
+      "sprite": "/assets/pokemon/220.png"
+    },
+    "221": {
+      "internalId": 221,
+      "dexNumber": 221,
+      "name": "Cochignon",
+      "sprite": "/assets/pokemon/221.png"
+    },
+    "222": {
+      "internalId": 222,
+      "dexNumber": 222,
+      "name": "Corayon",
+      "sprite": "/assets/pokemon/222.png"
+    },
+    "223": {
+      "internalId": 223,
+      "dexNumber": 223,
+      "name": "Rémoraid",
+      "sprite": "/assets/pokemon/223.png"
+    },
+    "224": {
+      "internalId": 224,
+      "dexNumber": 224,
+      "name": "Octillery",
+      "sprite": "/assets/pokemon/224.png"
+    },
+    "225": {
+      "internalId": 225,
+      "dexNumber": 225,
+      "name": "Cadoizo",
+      "sprite": "/assets/pokemon/225.png"
+    },
+    "226": {
+      "internalId": 226,
+      "dexNumber": 226,
+      "name": "Démanta",
+      "sprite": "/assets/pokemon/226.png"
+    },
+    "227": {
+      "internalId": 227,
+      "dexNumber": 227,
+      "name": "Airmure",
+      "sprite": "/assets/pokemon/227.png"
+    },
+    "228": {
+      "internalId": 228,
+      "dexNumber": 228,
+      "name": "Malosse",
+      "sprite": "/assets/pokemon/228.png"
+    },
+    "229": {
+      "internalId": 229,
+      "dexNumber": 229,
+      "name": "Démolosse",
+      "sprite": "/assets/pokemon/229.png"
+    },
+    "230": {
+      "internalId": 230,
+      "dexNumber": 230,
+      "name": "Hyporoi",
+      "sprite": "/assets/pokemon/230.png"
+    },
+    "231": {
+      "internalId": 231,
+      "dexNumber": 231,
+      "name": "Phanpy",
+      "sprite": "/assets/pokemon/231.png"
+    },
+    "232": {
+      "internalId": 232,
+      "dexNumber": 232,
+      "name": "Donphan",
+      "sprite": "/assets/pokemon/232.png"
+    },
+    "233": {
+      "internalId": 233,
+      "dexNumber": 233,
+      "name": "Porygon2",
+      "sprite": "/assets/pokemon/233.png"
+    },
+    "234": {
+      "internalId": 234,
+      "dexNumber": 234,
+      "name": "Cerfrousse",
+      "sprite": "/assets/pokemon/234.png"
+    },
+    "235": {
+      "internalId": 235,
+      "dexNumber": 235,
+      "name": "Queulorior",
+      "sprite": "/assets/pokemon/235.png"
+    },
+    "236": {
+      "internalId": 236,
+      "dexNumber": 236,
+      "name": "Debugant",
+      "sprite": "/assets/pokemon/236.png"
+    },
+    "237": {
+      "internalId": 237,
+      "dexNumber": 237,
+      "name": "Kapoera",
+      "sprite": "/assets/pokemon/237.png"
+    },
+    "238": {
+      "internalId": 238,
+      "dexNumber": 238,
+      "name": "Lippouti",
+      "sprite": "/assets/pokemon/238.png"
+    },
+    "239": {
+      "internalId": 239,
+      "dexNumber": 239,
+      "name": "Élekid",
+      "sprite": "/assets/pokemon/239.png"
+    },
+    "240": {
+      "internalId": 240,
+      "dexNumber": 240,
+      "name": "Magby",
+      "sprite": "/assets/pokemon/240.png"
+    },
+    "241": {
+      "internalId": 241,
+      "dexNumber": 241,
+      "name": "Écrémeuh",
+      "sprite": "/assets/pokemon/241.png"
+    },
+    "242": {
+      "internalId": 242,
+      "dexNumber": 242,
+      "name": "Leuphorie",
+      "sprite": "/assets/pokemon/242.png"
+    },
+    "243": {
+      "internalId": 243,
+      "dexNumber": 243,
+      "name": "Raikou",
+      "sprite": "/assets/pokemon/243.png"
+    },
+    "244": {
+      "internalId": 244,
+      "dexNumber": 244,
+      "name": "Entei",
+      "sprite": "/assets/pokemon/244.png"
+    },
+    "245": {
+      "internalId": 245,
+      "dexNumber": 245,
+      "name": "Suicune",
+      "sprite": "/assets/pokemon/245.png"
+    },
+    "246": {
+      "internalId": 246,
+      "dexNumber": 246,
+      "name": "Embrylex",
+      "sprite": "/assets/pokemon/246.png"
+    },
+    "247": {
+      "internalId": 247,
+      "dexNumber": 247,
+      "name": "Ymphect",
+      "sprite": "/assets/pokemon/247.png"
+    },
+    "248": {
+      "internalId": 248,
+      "dexNumber": 248,
+      "name": "Tyranocif",
+      "sprite": "/assets/pokemon/248.png"
+    },
+    "249": {
+      "internalId": 249,
+      "dexNumber": 249,
+      "name": "Lugia",
+      "sprite": "/assets/pokemon/249.png"
+    },
+    "250": {
+      "internalId": 250,
+      "dexNumber": 250,
+      "name": "Ho-Oh",
+      "sprite": "/assets/pokemon/250.png"
+    },
+    "251": {
+      "internalId": 251,
+      "dexNumber": 251,
+      "name": "Celebi",
+      "sprite": "/assets/pokemon/251.png"
+    },
+    "277": {
+      "internalId": 277,
+      "dexNumber": 252,
+      "name": "Arcko",
+      "sprite": "/assets/pokemon/277.png"
+    },
+    "278": {
+      "internalId": 278,
+      "dexNumber": 253,
+      "name": "Massko",
+      "sprite": "/assets/pokemon/278.png"
+    },
+    "279": {
+      "internalId": 279,
+      "dexNumber": 254,
+      "name": "Jungko",
+      "sprite": "/assets/pokemon/279.png"
+    },
+    "280": {
+      "internalId": 280,
+      "dexNumber": 255,
+      "name": "Poussifeu",
+      "sprite": "/assets/pokemon/280.png"
+    },
+    "281": {
+      "internalId": 281,
+      "dexNumber": 256,
+      "name": "Galifeu",
+      "sprite": "/assets/pokemon/281.png"
+    },
+    "282": {
+      "internalId": 282,
+      "dexNumber": 257,
+      "name": "Braségali",
+      "sprite": "/assets/pokemon/282.png"
+    },
+    "283": {
+      "internalId": 283,
+      "dexNumber": 258,
+      "name": "Gobou",
+      "sprite": "/assets/pokemon/283.png"
+    },
+    "284": {
+      "internalId": 284,
+      "dexNumber": 259,
+      "name": "Flobio",
+      "sprite": "/assets/pokemon/284.png"
+    },
+    "285": {
+      "internalId": 285,
+      "dexNumber": 260,
+      "name": "Laggron",
+      "sprite": "/assets/pokemon/285.png"
+    },
+    "286": {
+      "internalId": 286,
+      "dexNumber": 261,
+      "name": "Medhyèna",
+      "sprite": "/assets/pokemon/286.png"
+    },
+    "287": {
+      "internalId": 287,
+      "dexNumber": 262,
+      "name": "Grahyèna",
+      "sprite": "/assets/pokemon/287.png"
+    },
+    "288": {
+      "internalId": 288,
+      "dexNumber": 263,
+      "name": "Zigzaton",
+      "sprite": "/assets/pokemon/288.png"
+    },
+    "289": {
+      "internalId": 289,
+      "dexNumber": 264,
+      "name": "Linéon",
+      "sprite": "/assets/pokemon/289.png"
+    },
+    "290": {
+      "internalId": 290,
+      "dexNumber": 265,
+      "name": "Chenipotte",
+      "sprite": "/assets/pokemon/290.png"
+    },
+    "291": {
+      "internalId": 291,
+      "dexNumber": 266,
+      "name": "Armulys",
+      "sprite": "/assets/pokemon/291.png"
+    },
+    "292": {
+      "internalId": 292,
+      "dexNumber": 267,
+      "name": "Charmillon",
+      "sprite": "/assets/pokemon/292.png"
+    },
+    "293": {
+      "internalId": 293,
+      "dexNumber": 268,
+      "name": "Blindalys",
+      "sprite": "/assets/pokemon/293.png"
+    },
+    "294": {
+      "internalId": 294,
+      "dexNumber": 269,
+      "name": "Papinox",
+      "sprite": "/assets/pokemon/294.png"
+    },
+    "295": {
+      "internalId": 295,
+      "dexNumber": 270,
+      "name": "Nénupiot",
+      "sprite": "/assets/pokemon/295.png"
+    },
+    "296": {
+      "internalId": 296,
+      "dexNumber": 271,
+      "name": "Lombre",
+      "sprite": "/assets/pokemon/296.png"
+    },
+    "297": {
+      "internalId": 297,
+      "dexNumber": 272,
+      "name": "Ludicolo",
+      "sprite": "/assets/pokemon/297.png"
+    },
+    "298": {
+      "internalId": 298,
+      "dexNumber": 273,
+      "name": "Grainipiot",
+      "sprite": "/assets/pokemon/298.png"
+    },
+    "299": {
+      "internalId": 299,
+      "dexNumber": 274,
+      "name": "Pifeuil",
+      "sprite": "/assets/pokemon/299.png"
+    },
+    "300": {
+      "internalId": 300,
+      "dexNumber": 275,
+      "name": "Tengalice",
+      "sprite": "/assets/pokemon/300.png"
+    },
+    "301": {
+      "internalId": 301,
+      "dexNumber": 290,
+      "name": "Ningale",
+      "sprite": "/assets/pokemon/301.png"
+    },
+    "302": {
+      "internalId": 302,
+      "dexNumber": 291,
+      "name": "Ninjask",
+      "sprite": "/assets/pokemon/302.png"
+    },
+    "303": {
+      "internalId": 303,
+      "dexNumber": 292,
+      "name": "Munja",
+      "sprite": "/assets/pokemon/303.png"
+    },
+    "304": {
+      "internalId": 304,
+      "dexNumber": 276,
+      "name": "Nirondelle",
+      "sprite": "/assets/pokemon/304.png"
+    },
+    "305": {
+      "internalId": 305,
+      "dexNumber": 277,
+      "name": "Hélédelle",
+      "sprite": "/assets/pokemon/305.png"
+    },
+    "306": {
+      "internalId": 306,
+      "dexNumber": 285,
+      "name": "Balignon",
+      "sprite": "/assets/pokemon/306.png"
+    },
+    "307": {
+      "internalId": 307,
+      "dexNumber": 286,
+      "name": "Chapignon",
+      "sprite": "/assets/pokemon/307.png"
+    },
+    "308": {
+      "internalId": 308,
+      "dexNumber": 327,
+      "name": "Spinda",
+      "sprite": "/assets/pokemon/308.png"
+    },
+    "309": {
+      "internalId": 309,
+      "dexNumber": 278,
+      "name": "Goélise",
+      "sprite": "/assets/pokemon/309.png"
+    },
+    "310": {
+      "internalId": 310,
+      "dexNumber": 279,
+      "name": "Bekipan",
+      "sprite": "/assets/pokemon/310.png"
+    },
+    "311": {
+      "internalId": 311,
+      "dexNumber": 283,
+      "name": "Arakdo",
+      "sprite": "/assets/pokemon/311.png"
+    },
+    "312": {
+      "internalId": 312,
+      "dexNumber": 284,
+      "name": "Maskadra",
+      "sprite": "/assets/pokemon/312.png"
+    },
+    "313": {
+      "internalId": 313,
+      "dexNumber": 320,
+      "name": "Wailmer",
+      "sprite": "/assets/pokemon/313.png"
+    },
+    "314": {
+      "internalId": 314,
+      "dexNumber": 321,
+      "name": "Wailord",
+      "sprite": "/assets/pokemon/314.png"
+    },
+    "315": {
+      "internalId": 315,
+      "dexNumber": 300,
+      "name": "Skitty",
+      "sprite": "/assets/pokemon/315.png"
+    },
+    "316": {
+      "internalId": 316,
+      "dexNumber": 301,
+      "name": "Delcatty",
+      "sprite": "/assets/pokemon/316.png"
+    },
+    "317": {
+      "internalId": 317,
+      "dexNumber": 352,
+      "name": "Kecleon",
+      "sprite": "/assets/pokemon/317.png"
+    },
+    "318": {
+      "internalId": 318,
+      "dexNumber": 343,
+      "name": "Balbuto",
+      "sprite": "/assets/pokemon/318.png"
+    },
+    "319": {
+      "internalId": 319,
+      "dexNumber": 344,
+      "name": "Kaorine",
+      "sprite": "/assets/pokemon/319.png"
+    },
+    "320": {
+      "internalId": 320,
+      "dexNumber": 299,
+      "name": "Tarinor",
+      "sprite": "/assets/pokemon/320.png"
+    },
+    "321": {
+      "internalId": 321,
+      "dexNumber": 324,
+      "name": "Chartor",
+      "sprite": "/assets/pokemon/321.png"
+    },
+    "322": {
+      "internalId": 322,
+      "dexNumber": 302,
+      "name": "Ténéfix",
+      "sprite": "/assets/pokemon/322.png"
+    },
+    "323": {
+      "internalId": 323,
+      "dexNumber": 339,
+      "name": "Barloche",
+      "sprite": "/assets/pokemon/323.png"
+    },
+    "324": {
+      "internalId": 324,
+      "dexNumber": 340,
+      "name": "Barbicha",
+      "sprite": "/assets/pokemon/324.png"
+    },
+    "325": {
+      "internalId": 325,
+      "dexNumber": 370,
+      "name": "Lovdisc",
+      "sprite": "/assets/pokemon/325.png"
+    },
+    "326": {
+      "internalId": 326,
+      "dexNumber": 341,
+      "name": "Écrapince",
+      "sprite": "/assets/pokemon/326.png"
+    },
+    "327": {
+      "internalId": 327,
+      "dexNumber": 342,
+      "name": "Colhomard",
+      "sprite": "/assets/pokemon/327.png"
+    },
+    "328": {
+      "internalId": 328,
+      "dexNumber": 349,
+      "name": "Barpau",
+      "sprite": "/assets/pokemon/328.png"
+    },
+    "329": {
+      "internalId": 329,
+      "dexNumber": 350,
+      "name": "Milobellus",
+      "sprite": "/assets/pokemon/329.png"
+    },
+    "330": {
+      "internalId": 330,
+      "dexNumber": 318,
+      "name": "Carvanha",
+      "sprite": "/assets/pokemon/330.png"
+    },
+    "331": {
+      "internalId": 331,
+      "dexNumber": 319,
+      "name": "Sharpedo",
+      "sprite": "/assets/pokemon/331.png"
+    },
+    "332": {
+      "internalId": 332,
+      "dexNumber": 328,
+      "name": "Kraknoix",
+      "sprite": "/assets/pokemon/332.png"
+    },
+    "333": {
+      "internalId": 333,
+      "dexNumber": 329,
+      "name": "Vibraninf",
+      "sprite": "/assets/pokemon/333.png"
+    },
+    "334": {
+      "internalId": 334,
+      "dexNumber": 330,
+      "name": "Libégon",
+      "sprite": "/assets/pokemon/334.png"
+    },
+    "335": {
+      "internalId": 335,
+      "dexNumber": 296,
+      "name": "Makuhita",
+      "sprite": "/assets/pokemon/335.png"
+    },
+    "336": {
+      "internalId": 336,
+      "dexNumber": 297,
+      "name": "Hariyama",
+      "sprite": "/assets/pokemon/336.png"
+    },
+    "337": {
+      "internalId": 337,
+      "dexNumber": 309,
+      "name": "Dynavolt",
+      "sprite": "/assets/pokemon/337.png"
+    },
+    "338": {
+      "internalId": 338,
+      "dexNumber": 310,
+      "name": "Élecsprint",
+      "sprite": "/assets/pokemon/338.png"
+    },
+    "339": {
+      "internalId": 339,
+      "dexNumber": 322,
+      "name": "Chamallot",
+      "sprite": "/assets/pokemon/339.png"
+    },
+    "340": {
+      "internalId": 340,
+      "dexNumber": 323,
+      "name": "Camérupt",
+      "sprite": "/assets/pokemon/340.png"
+    },
+    "341": {
+      "internalId": 341,
+      "dexNumber": 363,
+      "name": "Obalie",
+      "sprite": "/assets/pokemon/341.png"
+    },
+    "342": {
+      "internalId": 342,
+      "dexNumber": 364,
+      "name": "Phogleur",
+      "sprite": "/assets/pokemon/342.png"
+    },
+    "343": {
+      "internalId": 343,
+      "dexNumber": 365,
+      "name": "Kaimorse",
+      "sprite": "/assets/pokemon/343.png"
+    },
+    "344": {
+      "internalId": 344,
+      "dexNumber": 331,
+      "name": "Cacnea",
+      "sprite": "/assets/pokemon/344.png"
+    },
+    "345": {
+      "internalId": 345,
+      "dexNumber": 332,
+      "name": "Cacturne",
+      "sprite": "/assets/pokemon/345.png"
+    },
+    "346": {
+      "internalId": 346,
+      "dexNumber": 361,
+      "name": "Stalgamin",
+      "sprite": "/assets/pokemon/346.png"
+    },
+    "347": {
+      "internalId": 347,
+      "dexNumber": 362,
+      "name": "Oniglali",
+      "sprite": "/assets/pokemon/347.png"
+    },
+    "348": {
+      "internalId": 348,
+      "dexNumber": 337,
+      "name": "Séléroc",
+      "sprite": "/assets/pokemon/348.png"
+    },
+    "349": {
+      "internalId": 349,
+      "dexNumber": 338,
+      "name": "Solaroc",
+      "sprite": "/assets/pokemon/349.png"
+    },
+    "350": {
+      "internalId": 350,
+      "dexNumber": 298,
+      "name": "Azurill",
+      "sprite": "/assets/pokemon/350.png"
+    },
+    "351": {
+      "internalId": 351,
+      "dexNumber": 325,
+      "name": "Spoink",
+      "sprite": "/assets/pokemon/351.png"
+    },
+    "352": {
+      "internalId": 352,
+      "dexNumber": 326,
+      "name": "Groret",
+      "sprite": "/assets/pokemon/352.png"
+    },
+    "353": {
+      "internalId": 353,
+      "dexNumber": 311,
+      "name": "Posipi",
+      "sprite": "/assets/pokemon/353.png"
+    },
+    "354": {
+      "internalId": 354,
+      "dexNumber": 312,
+      "name": "Négapi",
+      "sprite": "/assets/pokemon/354.png"
+    },
+    "355": {
+      "internalId": 355,
+      "dexNumber": 303,
+      "name": "Mysdibule",
+      "sprite": "/assets/pokemon/355.png"
+    },
+    "356": {
+      "internalId": 356,
+      "dexNumber": 307,
+      "name": "Méditikka",
+      "sprite": "/assets/pokemon/356.png"
+    },
+    "357": {
+      "internalId": 357,
+      "dexNumber": 308,
+      "name": "Charmina",
+      "sprite": "/assets/pokemon/357.png"
+    },
+    "358": {
+      "internalId": 358,
+      "dexNumber": 333,
+      "name": "Tylton",
+      "sprite": "/assets/pokemon/358.png"
+    },
+    "359": {
+      "internalId": 359,
+      "dexNumber": 334,
+      "name": "Altaria",
+      "sprite": "/assets/pokemon/359.png"
+    },
+    "360": {
+      "internalId": 360,
+      "dexNumber": 360,
+      "name": "Okéoké",
+      "sprite": "/assets/pokemon/360.png"
+    },
+    "361": {
+      "internalId": 361,
+      "dexNumber": 355,
+      "name": "Skelénox",
+      "sprite": "/assets/pokemon/361.png"
+    },
+    "362": {
+      "internalId": 362,
+      "dexNumber": 356,
+      "name": "Téraclope",
+      "sprite": "/assets/pokemon/362.png"
+    },
+    "363": {
+      "internalId": 363,
+      "dexNumber": 315,
+      "name": "Rosélia",
+      "sprite": "/assets/pokemon/363.png"
+    },
+    "364": {
+      "internalId": 364,
+      "dexNumber": 287,
+      "name": "Parecool",
+      "sprite": "/assets/pokemon/364.png"
+    },
+    "365": {
+      "internalId": 365,
+      "dexNumber": 288,
+      "name": "Vigoroth",
+      "sprite": "/assets/pokemon/365.png"
+    },
+    "366": {
+      "internalId": 366,
+      "dexNumber": 289,
+      "name": "Monaflèmit",
+      "sprite": "/assets/pokemon/366.png"
+    },
+    "367": {
+      "internalId": 367,
+      "dexNumber": 316,
+      "name": "Gloupti",
+      "sprite": "/assets/pokemon/367.png"
+    },
+    "368": {
+      "internalId": 368,
+      "dexNumber": 317,
+      "name": "Avaltout",
+      "sprite": "/assets/pokemon/368.png"
+    },
+    "369": {
+      "internalId": 369,
+      "dexNumber": 357,
+      "name": "Tropius",
+      "sprite": "/assets/pokemon/369.png"
+    },
+    "370": {
+      "internalId": 370,
+      "dexNumber": 293,
+      "name": "Chuchmur",
+      "sprite": "/assets/pokemon/370.png"
+    },
+    "371": {
+      "internalId": 371,
+      "dexNumber": 294,
+      "name": "Ramboum",
+      "sprite": "/assets/pokemon/371.png"
+    },
+    "372": {
+      "internalId": 372,
+      "dexNumber": 295,
+      "name": "Brouhabam",
+      "sprite": "/assets/pokemon/372.png"
+    },
+    "373": {
+      "internalId": 373,
+      "dexNumber": 366,
+      "name": "Coquiperl",
+      "sprite": "/assets/pokemon/373.png"
+    },
+    "374": {
+      "internalId": 374,
+      "dexNumber": 367,
+      "name": "Serpang",
+      "sprite": "/assets/pokemon/374.png"
+    },
+    "375": {
+      "internalId": 375,
+      "dexNumber": 368,
+      "name": "Rosabyss",
+      "sprite": "/assets/pokemon/375.png"
+    },
+    "376": {
+      "internalId": 376,
+      "dexNumber": 359,
+      "name": "Absol",
+      "sprite": "/assets/pokemon/376.png"
+    },
+    "377": {
+      "internalId": 377,
+      "dexNumber": 353,
+      "name": "Polichombr",
+      "sprite": "/assets/pokemon/377.png"
+    },
+    "378": {
+      "internalId": 378,
+      "dexNumber": 354,
+      "name": "Branette",
+      "sprite": "/assets/pokemon/378.png"
+    },
+    "379": {
+      "internalId": 379,
+      "dexNumber": 336,
+      "name": "Séviper",
+      "sprite": "/assets/pokemon/379.png"
+    },
+    "380": {
+      "internalId": 380,
+      "dexNumber": 335,
+      "name": "Mangriff",
+      "sprite": "/assets/pokemon/380.png"
+    },
+    "381": {
+      "internalId": 381,
+      "dexNumber": 369,
+      "name": "Relicanth",
+      "sprite": "/assets/pokemon/381.png"
+    },
+    "382": {
+      "internalId": 382,
+      "dexNumber": 304,
+      "name": "Galekid",
+      "sprite": "/assets/pokemon/382.png"
+    },
+    "383": {
+      "internalId": 383,
+      "dexNumber": 305,
+      "name": "Galegon",
+      "sprite": "/assets/pokemon/383.png"
+    },
+    "384": {
+      "internalId": 384,
+      "dexNumber": 306,
+      "name": "Galeking",
+      "sprite": "/assets/pokemon/384.png"
+    },
+    "385": {
+      "internalId": 385,
+      "dexNumber": 351,
+      "name": "Morphéo",
+      "sprite": "/assets/pokemon/385.png"
+    },
+    "386": {
+      "internalId": 386,
+      "dexNumber": 313,
+      "name": "Muciole",
+      "sprite": "/assets/pokemon/386.png"
+    },
+    "387": {
+      "internalId": 387,
+      "dexNumber": 314,
+      "name": "Lumivole",
+      "sprite": "/assets/pokemon/387.png"
+    },
+    "388": {
+      "internalId": 388,
+      "dexNumber": 345,
+      "name": "Lilia",
+      "sprite": "/assets/pokemon/388.png"
+    },
+    "389": {
+      "internalId": 389,
+      "dexNumber": 346,
+      "name": "Vacilys",
+      "sprite": "/assets/pokemon/389.png"
+    },
+    "390": {
+      "internalId": 390,
+      "dexNumber": 347,
+      "name": "Anorith",
+      "sprite": "/assets/pokemon/390.png"
+    },
+    "391": {
+      "internalId": 391,
+      "dexNumber": 348,
+      "name": "Armaldo",
+      "sprite": "/assets/pokemon/391.png"
+    },
+    "392": {
+      "internalId": 392,
+      "dexNumber": 280,
+      "name": "Tarsal",
+      "sprite": "/assets/pokemon/392.png"
+    },
+    "393": {
+      "internalId": 393,
+      "dexNumber": 281,
+      "name": "Kirlia",
+      "sprite": "/assets/pokemon/393.png"
+    },
+    "394": {
+      "internalId": 394,
+      "dexNumber": 282,
+      "name": "Gardevoir",
+      "sprite": "/assets/pokemon/394.png"
+    },
+    "395": {
+      "internalId": 395,
+      "dexNumber": 371,
+      "name": "Draby",
+      "sprite": "/assets/pokemon/395.png"
+    },
+    "396": {
+      "internalId": 396,
+      "dexNumber": 372,
+      "name": "Drackhaus",
+      "sprite": "/assets/pokemon/396.png"
+    },
+    "397": {
+      "internalId": 397,
+      "dexNumber": 373,
+      "name": "Drattak",
+      "sprite": "/assets/pokemon/397.png"
+    },
+    "398": {
+      "internalId": 398,
+      "dexNumber": 374,
+      "name": "Terhal",
+      "sprite": "/assets/pokemon/398.png"
+    },
+    "399": {
+      "internalId": 399,
+      "dexNumber": 375,
+      "name": "Métang",
+      "sprite": "/assets/pokemon/399.png"
+    },
+    "400": {
+      "internalId": 400,
+      "dexNumber": 376,
+      "name": "Métalosse",
+      "sprite": "/assets/pokemon/400.png"
+    },
+    "401": {
+      "internalId": 401,
+      "dexNumber": 377,
+      "name": "Regirock",
+      "sprite": "/assets/pokemon/401.png"
+    },
+    "402": {
+      "internalId": 402,
+      "dexNumber": 378,
+      "name": "Regice",
+      "sprite": "/assets/pokemon/402.png"
+    },
+    "403": {
+      "internalId": 403,
+      "dexNumber": 379,
+      "name": "Registeel",
+      "sprite": "/assets/pokemon/403.png"
+    },
+    "404": {
+      "internalId": 404,
+      "dexNumber": 382,
+      "name": "Kyogre",
+      "sprite": "/assets/pokemon/404.png"
+    },
+    "405": {
+      "internalId": 405,
+      "dexNumber": 383,
+      "name": "Groudon",
+      "sprite": "/assets/pokemon/405.png"
+    },
+    "406": {
+      "internalId": 406,
+      "dexNumber": 384,
+      "name": "Rayquaza",
+      "sprite": "/assets/pokemon/406.png"
+    },
+    "407": {
+      "internalId": 407,
+      "dexNumber": 380,
+      "name": "Latias",
+      "sprite": "/assets/pokemon/407.png"
+    },
+    "408": {
+      "internalId": 408,
+      "dexNumber": 381,
+      "name": "Latios",
+      "sprite": "/assets/pokemon/408.png"
+    },
+    "409": {
+      "internalId": 409,
+      "dexNumber": 385,
+      "name": "Jirachi",
+      "sprite": "/assets/pokemon/409.png"
+    },
+    "410": {
+      "internalId": 410,
+      "dexNumber": 386,
+      "name": "Deoxys",
+      "sprite": "/assets/pokemon/410.png"
+    },
+    "411": {
+      "internalId": 411,
+      "dexNumber": 358,
+      "name": "Éoko",
+      "sprite": "/assets/pokemon/411.png"
+    }
+  },
+  "egg": {
+    "internalId": 412,
+    "name": "Œuf",
+    "sprite": "/assets/pokemon/egg.png"
+  }
+}

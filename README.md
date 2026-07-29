@@ -43,10 +43,27 @@ défaut est `55355`. Si RetroArch tourne sur un autre ordinateur, renseigne
 La ROM française originale attendue possède le CRC32 `A3FDCCB1`. Une ROM
 modifiée peut utiliser des cartes ou des tables de rencontres différentes.
 
+## Équipe Pokémon Émeraude pour OBS
+
+Cette source lit en direct les six emplacements de l’équipe sur une seule ligne
+et affiche les sprites GBA, les noms ou surnoms, les états, les objets tenus et
+les PV :
+
+- URL : `http://127.0.0.1:3000/team.html`
+- largeur : `940`
+- hauteur : `200`
+- FPS : `60`
+
+L’emoji `📦` signale qu’un Pokémon tient un objet.
+Les icônes alternent leurs deux frames à 30 images/s pendant 5 secondes, puis
+restent fixes pendant 25 secondes.
+
 ## Tester les animations
 
 Ouvre `http://127.0.0.1:3000/test.html`, puis clique sur **Simuler un trophée**.
 La simulation déclenche la LED et la barre sans modifier la progression RetroAchievements.
+Cette page contient aussi les aperçus complets des rencontres et de l’équipe.
+L’aperçu de l’équipe est régénéré aléatoirement à chaque actualisation.
 
 ## Mode de comptage
 

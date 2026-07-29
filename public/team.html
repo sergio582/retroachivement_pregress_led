@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Équipe Pokémon Émeraude</title>
+    <style>
+        :root {
+            --accent: #a996ff;
+            --accent-dark: #55459d;
+            --highlight: #f0adff;
+            --text: #fbf9ff;
+            --muted: rgba(239, 234, 255, 0.72);
+            --panel: rgba(27, 20, 58, 0.92);
+            --line: rgba(190, 174, 255, 0.3);
+            --shadow: rgba(0, 0, 0, 0.68);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            background: transparent;
+            color: var(--text);
+            font-family: Inter, Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 12px;
+        }
+
+        .overlay {
+            width: min(916px, 100%);
+            filter: drop-shadow(0 5px 8px var(--shadow));
+        }
+
+        .title {
+            padding: 7px 14px 7px 16px;
+            border: 2px solid rgba(198, 183, 255, 0.52);
+            border-left: 7px solid var(--accent);
+            border-radius: 18px 18px 8px 8px;
+            background: linear-gradient(110deg, rgba(81, 65, 151, 0.97), rgba(29, 22, 64, 0.92));
+            box-shadow:
+                inset 0 2px 0 rgba(255, 255, 255, 0.14),
+                inset 0 -4px 0 rgba(20, 12, 50, 0.35);
+        }
+
+        .eyebrow {
+            margin-bottom: 1px;
+            color: #ded5ff;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.1;
+            text-shadow: 0 2px 3px var(--shadow);
+        }
+
+        .party {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .member {
+            display: grid;
+            grid-template-columns: 36px minmax(0, 1fr);
+            align-items: start;
+            min-height: 88px;
+            padding: 7px 7px 8px 5px;
+            border: 1px solid var(--line);
+            border-radius: 8px 8px 15px 15px;
+            background:
+                linear-gradient(90deg, rgba(81, 65, 151, 0.32), transparent 34%),
+                var(--panel);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                inset 0 -3px 0 rgba(12, 7, 35, 0.28);
+        }
+
+        .member.ko {
+            border-color: rgba(173, 164, 198, 0.24);
+        }
+
+        .sprite {
+            width: 32px;
+            height: 32px;
+            justify-self: center;
+            margin-top: 1px;
+            object-fit: cover;
+            object-position: center top;
+            image-rendering: pixelated;
+        }
+
+        .sprite.animating {
+            animation: party-icon-blink 66.667ms linear 75;
+        }
+
+        @keyframes party-icon-blink {
+            0%,
+            49.999% {
+                object-position: center top;
+            }
+
+            50%,
+            100% {
+                object-position: center bottom;
+            }
+        }
+
+        .member.ko .sprite {
+            filter: grayscale(0.75) brightness(0.72);
+        }
+
+        .details {
+            min-width: 0;
+        }
+
+        .member-line {
+            min-width: 0;
+        }
+
+        .identity {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .name,
+        .species {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .name {
+            font-size: 12px;
+            font-weight: 900;
+            text-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .species {
+            margin-top: 1px;
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .badges {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            flex: none;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .badge {
+            display: inline-grid;
+            width: 17px;
+            height: 17px;
+            place-items: center;
+        }
+
+        .health-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            margin: 5px 1px 3px;
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .health-value {
+            color: var(--text);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .health-bar {
+            overflow: hidden;
+            height: 7px;
+            border: 1px solid rgba(211, 201, 255, 0.28);
+            border-radius: 999px;
+            background: rgba(7, 4, 20, 0.72);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.65);
+        }
+
+        .health-fill {
+            width: var(--hp);
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #55d57c, #9cf064);
+            box-shadow: 0 0 7px rgba(116, 231, 112, 0.48);
+            transition: width 300ms ease;
+        }
+
+        .health-fill.medium {
+            background: linear-gradient(90deg, #e4b345, #f1dc68);
+            box-shadow: 0 0 7px rgba(240, 199, 82, 0.45);
+        }
+
+        .health-fill.low {
+            background: linear-gradient(90deg, #d84c68, #ff7b72);
+            box-shadow: 0 0 7px rgba(240, 82, 103, 0.45);
+        }
+
+        .health-fill.empty {
+            box-shadow: none;
+        }
+
+        .message {
+            margin-top: 8px;
+            padding: 11px 13px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            color: var(--muted);
+            background: rgba(44, 33, 88, 0.88);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .message.error {
+            border-color: rgba(255, 120, 120, 0.35);
+            color: #ffd8d8;
+            background: rgba(52, 8, 12, 0.86);
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="overlay">
+        <header class="title">
+            <div class="eyebrow">Pokémon Émeraude</div>
+            <h1>Équipe en direct</h1>
+        </header>
+
+        <div class="party" id="party" aria-live="polite"></div>
+        <div class="message" id="message">Lecture de l’équipe…</div>
+    </main>
+
+    <script>
+        "use strict";
+
+        const REFRESH_MS = 1200;
+        const SPRITE_ANIMATION_INTERVAL_MS = 30000;
+        const SPRITE_ANIMATION_DURATION_MS = 5000;
+        const previewMode = new URLSearchParams(window.location.search).has("preview");
+        const elements = {
+            party: document.getElementById("party"),
+            message: document.getElementById("message")
+        };
+        let updateInProgress = false;
+        let renderedSignature = "";
+        let spriteAnimationCleanup;
+        let spriteAnimationCycleStarted = false;
+        let spriteAnimationActive = false;
+
+        function createElement(tag, className, text) {
+            const element = document.createElement(tag);
+            if (className) element.className = className;
+            if (text !== undefined) element.textContent = text;
+            return element;
+        }
+
+        function healthClass(percent) {
+            if (percent <= 0) return "health-fill empty";
+            if (percent <= 20) return "health-fill low";
+            if (percent <= 50) return "health-fill medium";
+            return "health-fill";
+        }
+
+        function renderMember(pokemon) {
+            const member = createElement(
+                "article",
+                pokemon.status.id === "ko" ? "member ko" : "member"
+            );
+            const sprite = createElement("img", "sprite");
+            sprite.src = pokemon.sprite;
+            sprite.alt = `Sprite de ${pokemon.speciesName}`;
+
+            const details = createElement("div", "details");
+            const line = createElement("div", "member-line");
+            const identity = createElement("div", "identity");
+            identity.append(createElement("div", "name", pokemon.nickname || pokemon.speciesName));
+            if (pokemon.nickname) {
+                identity.append(createElement("div", "species", pokemon.speciesName));
+            }
+
+            const badges = createElement("div", "badges");
+            const status = createElement("span", "badge", pokemon.status.emoji);
+            status.setAttribute("aria-label", pokemon.status.label);
+            status.title = pokemon.status.label;
+            badges.append(status);
+
+            if (pokemon.hasHeldItem) {
+                const heldItem = createElement("span", "badge", "📦");
+                heldItem.setAttribute("aria-label", "Objet tenu");
+                heldItem.title = "Objet tenu";
+                badges.append(heldItem);
+            }
+
+            line.append(identity);
+
+            const healthLabel = createElement("div", "health-label");
+            healthLabel.append(
+                badges,
+                createElement("span", "health-value", `${pokemon.hp} / ${pokemon.maxHp}`)
+            );
+            const healthBar = createElement("div", "health-bar");
+            const healthFill = createElement("div", healthClass(pokemon.hpPercent));
+            healthFill.style.setProperty("--hp", `${Math.max(0, Math.min(pokemon.hpPercent, 100))}%`);
+            healthBar.append(healthFill);
+
+            details.append(line, healthLabel, healthBar);
+            member.append(sprite, details);
+            return member;
+        }
+
+        function render(party) {
+            const signature = JSON.stringify(party);
+            if (signature === renderedSignature) return;
+            renderedSignature = signature;
+
+            elements.party.replaceChildren(...party.map(renderMember));
+            if (spriteAnimationActive) {
+                elements.party.querySelectorAll(".sprite")
+                    .forEach((sprite) => sprite.classList.add("animating"));
+            }
+            elements.message.classList.remove("error");
+            elements.message.textContent = party.length === 0
+                ? "Aucun Pokémon dans l’équipe."
+                : "";
+            elements.message.hidden = party.length > 0;
+
+            if (party.length > 0 && !spriteAnimationCycleStarted) {
+                spriteAnimationCycleStarted = true;
+                requestAnimationFrame(animatePartySprites);
+                setInterval(animatePartySprites, SPRITE_ANIMATION_INTERVAL_MS);
+            }
+        }
+
+        function renderError(error) {
+            renderedSignature = "";
+            elements.party.replaceChildren();
+            elements.message.textContent = error;
+            elements.message.classList.add("error");
+            elements.message.hidden = false;
+        }
+
+        function animatePartySprites() {
+            const sprites = elements.party.querySelectorAll(".sprite");
+            if (sprites.length === 0) return;
+
+            clearTimeout(spriteAnimationCleanup);
+            spriteAnimationActive = true;
+            sprites.forEach((sprite) => sprite.classList.add("animating"));
+            spriteAnimationCleanup = setTimeout(() => {
+                spriteAnimationActive = false;
+                elements.party.querySelectorAll(".sprite")
+                    .forEach((sprite) => sprite.classList.remove("animating"));
+            }, SPRITE_ANIMATION_DURATION_MS + 50);
+        }
+
+        async function update(endpoint = "/api/emerald/team") {
+            if (updateInProgress) return;
+            updateInProgress = true;
+
+            try {
+                const response = await fetch(endpoint, { cache: "no-store" });
+                const data = await response.json();
+                if (!response.ok || !data.ok) {
+                    throw new Error(data.error || "Impossible de lire l’équipe.");
+                }
+                render(data.party);
+            } catch (error) {
+                renderError(error.message || "Connexion à RetroArch impossible.");
+            } finally {
+                updateInProgress = false;
+            }
+        }
+
+        if (previewMode) {
+            update("/api/emerald/test/team");
+        } else {
+            update();
+            setInterval(update, REFRESH_MS);
+        }
+    </script>
+</body>
+
+</html>
