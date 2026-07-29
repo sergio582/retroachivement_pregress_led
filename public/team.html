@@ -48,7 +48,7 @@
 
         .member {
             display: grid;
-            grid-template-columns: 36px minmax(0, 1fr);
+            grid-template-columns: 40px minmax(0, 1fr);
             align-items: start;
             padding: 5px 7px 5px 5px;
             border: 1px solid var(--line);
@@ -66,8 +66,8 @@
         }
 
         .sprite {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             justify-self: center;
             margin-top: 1px;
             object-fit: cover;
@@ -261,10 +261,12 @@
             identity.append(createElement("div", "name", pokemon.nickname || pokemon.speciesName));
 
             const badges = createElement("div", "badges");
-            const status = createElement("span", "badge", pokemon.status.emoji);
-            status.setAttribute("aria-label", pokemon.status.label);
-            status.title = pokemon.status.label;
-            badges.append(status);
+            if (pokemon.status.id !== "healthy") {
+                const status = createElement("span", "badge", pokemon.status.emoji);
+                status.setAttribute("aria-label", pokemon.status.label);
+                status.title = pokemon.status.label;
+                badges.append(status);
+            }
 
             if (pokemon.hasHeldItem) {
                 const heldItem = createElement("span", "badge", "📦");

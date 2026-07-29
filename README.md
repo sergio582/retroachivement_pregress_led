@@ -31,8 +31,10 @@ La troisième source navigateur lit la zone courante directement dans la RAM de
 **Pokémon Version Émeraude (France)** avec le cœur **mGBA**, puis affiche les
 Pokémon sauvages, leurs niveaux et leurs taux d’apparition :
 
+- les noms des Pokémon sont mis en avant par rapport au nom du lieu afin de
+  rester lisibles dans ce format compact ;
 - URL : `http://127.0.0.1:3000/emerald.html`
-- largeur : `480`
+- largeur : `380`
 - hauteur : `900`
 - FPS : `30`
 
@@ -49,14 +51,17 @@ Cette source lit en direct les six emplacements de l’équipe sur une seule lig
 et affiche les sprites GBA, les noms ou surnoms, les états, les objets tenus et
 les PV :
 
+- les sprites des Pokémon sont affichés en `36 × 36 px` ;
 - les cartes sont compactes et s’adaptent à leur contenu, avec un espacement
   identique au-dessus du nom et sous la barre de PV ;
 - URL : `http://127.0.0.1:3000/team.html`
 - largeur : `940`
-- hauteur : `140`
+- hauteur : `100`
 - FPS : `60`
 
-L’emoji `📦` signale qu’un Pokémon tient un objet.
+L’emoji `📦` signale qu’un Pokémon tient un objet. Aucun statut n’est affiché
+quand il est en bonne santé ; seules les altérations d’état et le K.O. ont une
+icône.
 Les icônes alternent leurs deux frames à 15 images/s pendant 5 secondes, puis
 restent fixes pendant 25 secondes.
 
