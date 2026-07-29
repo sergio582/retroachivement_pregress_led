@@ -51,11 +51,11 @@ les PV :
 
 - URL : `http://127.0.0.1:3000/team.html`
 - largeur : `940`
-- hauteur : `200`
+- hauteur : `140`
 - FPS : `60`
 
 L’emoji `📦` signale qu’un Pokémon tient un objet.
-Les icônes alternent leurs deux frames à 30 images/s pendant 5 secondes, puis
+Les icônes alternent leurs deux frames à 15 images/s pendant 5 secondes, puis
 restent fixes pendant 25 secondes.
 
 ## Tester les animations

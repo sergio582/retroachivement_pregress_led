@@ -250,13 +250,15 @@ app.post("/api/simulate-trophy", (_request, response) => {
 
 app.listen(PORT, "127.0.0.1", () => {
 	console.log("")
-	console.log("Overlay RetroAchievements lancé.")
+	console.log("Overlay RetroAchievements lancé")
 	console.log(`Barre de progression trophées: http://127.0.0.1:${PORT}`)
 	console.log(`Led GBA : http://127.0.0.1:${PORT}/led.html`)
 	console.log(`Mode : ${MODE}`)
-
-	console.log("Overlay Pokémon Emeraude lancé.")
+	console.log("")
+	console.log("Overlay Pokémon Emeraude lancé")
 	console.log(`Lieux : http://127.0.0.1:${PORT}/emerald.html`)
 	console.log(`Équipe pkmn : http://127.0.0.1:${PORT}/team.html`)
 	console.log("")
+	console.log("Maintenence")
+	console.log(`Page de test : http://127.0.0.1:${PORT}/test.html`)
 })
