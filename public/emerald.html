@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rencontres Pokémon Émeraude</title>
+    <style>
+        :root {
+            --accent: #a996ff;
+            --accent-dark: #55459d;
+            --highlight: #f0adff;
+            --text: #fbf9ff;
+            --muted: rgba(239, 234, 255, 0.74);
+            --panel: rgba(27, 20, 58, 0.9);
+            --panel-soft: rgba(44, 33, 88, 0.86);
+            --line: rgba(190, 174, 255, 0.3);
+            --shadow: rgba(0, 0, 0, 0.68);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            background: transparent;
+            color: var(--text);
+            font-family: Inter, Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 12px;
+        }
+
+        .overlay {
+            width: min(440px, 100%);
+            filter: drop-shadow(0 5px 8px var(--shadow));
+        }
+
+        .location {
+            position: relative;
+            overflow: hidden;
+            padding: 14px 18px 13px 20px;
+            border: 2px solid rgba(198, 183, 255, 0.52);
+            border-left: 7px solid var(--accent);
+            border-radius: 20px 20px 8px 8px;
+            background:
+                linear-gradient(110deg, rgba(81, 65, 151, 0.97), rgba(29, 22, 64, 0.92));
+            box-shadow:
+                inset 0 2px 0 rgba(255, 255, 255, 0.14),
+                inset 0 -4px 0 rgba(20, 12, 50, 0.35);
+        }
+
+        .location::after {
+            content: "";
+            position: absolute;
+            top: -44px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgba(218, 207, 255, 0.2);
+            border-radius: 50%;
+            box-shadow: 0 0 0 18px rgba(218, 207, 255, 0.05);
+        }
+
+        .eyebrow {
+            margin-bottom: 3px;
+            color: #ded5ff;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.1;
+            text-shadow: 0 2px 3px var(--shadow);
+        }
+
+        .methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .method {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 8px 8px 16px 16px;
+            background: var(--panel);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                inset 0 -3px 0 rgba(12, 7, 35, 0.28);
+        }
+
+        .method-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(90deg, rgba(107, 88, 190, 0.62), rgba(65, 43, 115, 0.18));
+        }
+
+        .method-title {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .pokemon-list {
+            margin: 0;
+            padding: 4px 10px 6px;
+            list-style: none;
+        }
+
+        .pokemon {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto auto auto;
+            align-items: center;
+            gap: 8px;
+            min-height: 25px;
+            border-bottom: 1px solid rgba(196, 181, 255, 0.12);
+            font-size: 12px;
+        }
+
+        .pokemon:last-child {
+            border-bottom: 0;
+        }
+
+        .pokemon-name {
+            overflow: hidden;
+            font-weight: 800;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .level {
+            color: var(--muted);
+            font-size: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .rate {
+            min-width: 38px;
+            color: var(--highlight);
+            font-size: 12px;
+            font-weight: 900;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .method.fishing .pokemon {
+            grid-template-columns: 24px minmax(0, 1fr) auto auto auto;
+        }
+
+        .rod-icon {
+            width: 24px;
+            height: 24px;
+            background: center / 24px 24px no-repeat
+                url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEW0tLQxMTGcagjFnEFzQRDmvWrF3uactL1qg4vNWjn2g2L///8AAAAAAAAAAAAAAAAe1pDyAAAAAXRSTlMAQObYZgAAAIdJREFUGJVjYEADjIJIHNEQASSOSSOSMo8MJCnxNkeEDGOTCVxKgEFYWREmAUQmxgIwCQYGISNDmASQUFYWgHNgUhDFjM5OAnAOg4ixIkSVINCpjM4QDuNOAaC8iCOYIzlzIpBiFABzxDwLoWYCFTCmC8A4QGlBmG1gHoIDDgMk3wkiBwkUAACxJgvxeilzLwAAAABJRU5ErkJggg==");
+            image-rendering: pixelated;
+        }
+
+        .rod-icon.good-rod {
+            background-image:
+                url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEW0tLQxMTHe9mK0zUFSUot7e7RziynF3uactL1qg4vNWjn2g2L///8AAAAAAAAAAADEvTDNAAAAAXRSTlMAQObYZgAAAINJREFUGJVjYMADGBPFEuAcAbZkQ7gEAwObkQCCwyCsCFMFEoBJgSmYFJiTbJyA4MDUQUioOijHDMYRhKsTYGA8BcQQEwQYpFYtZGAQDYRwxLMaGRhEHCHOYawAqmd0FYC4TRCIGV0EYGYDsUggMscR5gcQxxVmEwNcE6Mg2CBB1KABAGumDQnqDXn9AAAAAElFTkSuQmCC");
+        }
+
+        .rod-icon.super-rod {
+            background-image:
+                url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEW0tLQxMTHNxcWUg4NSUot7e7RaUlLF3uactL1qg4vNWjn2g2L///9S7lIAAAAAAAA7VSTSAAAAAXRSTlMAQObYZgAAAJVJREFUGJVjYMADxAST4WxGhjSzBBhHgIEhORGJw2gkgOAwCCvD9QCxGUxKUBCoS5EBoU0MrguoklFQUADOkdpd3ghlCzBI75aASAHZDOLSC+8KQNkMjFWiglBLgbSgiCPETsZTAgwCjK4CYI7UqoWMAowuEI54FshYkUCIsgqQGWBNQPVgg0TAmgSh7nWBOw/ieGQAAEv+EP/gntMXAAAAAElFTkSuQmCC");
+        }
+
+        .caught {
+            width: 17px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 1000;
+            text-align: center;
+            text-shadow: 0 0 7px rgba(169, 150, 255, 0.8);
+        }
+
+        .caught.missing {
+            color: rgba(239, 234, 255, 0.3);
+            text-shadow: none;
+        }
+
+        .message,
+        .note,
+        .warning {
+            margin-top: 8px;
+            padding: 10px 13px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            background: var(--panel-soft);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.35;
+            text-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .message {
+            color: var(--muted);
+        }
+
+        .message.error {
+            border-color: rgba(255, 120, 120, 0.35);
+            color: #ffd8d8;
+            background: rgba(52, 8, 12, 0.86);
+        }
+
+        .note {
+            color: #fff0a8;
+        }
+
+        .warning {
+            color: #ffd2a3;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main class="overlay">
+        <header class="location">
+            <div class="eyebrow">Zone actuelle</div>
+            <h1 id="location-name">Connexion à RetroArch…</h1>
+        </header>
+
+        <div class="methods" id="methods" aria-live="polite"></div>
+        <div class="message" id="message">Lecture de la mémoire du jeu…</div>
+        <div class="note" id="note" hidden></div>
+        <div class="warning" id="warning" hidden></div>
+    </main>
+
+    <script>
+        "use strict";
+
+        const REFRESH_MS = 1200;
+        const elements = {
+            location: document.getElementById("location-name"),
+            methods: document.getElementById("methods"),
+            message: document.getElementById("message"),
+            note: document.getElementById("note"),
+            warning: document.getElementById("warning")
+        };
+
+        let updateInProgress = false;
+        let renderedSignature = "";
+
+        function createElement(tag, className, text) {
+            const element = document.createElement(tag);
+            if (className) element.className = className;
+            if (text !== undefined) element.textContent = text;
+            return element;
+        }
+
+        function levelLabel(pokemon) {
+            return pokemon.minLevel === pokemon.maxLevel
+                ? `N. ${pokemon.minLevel}`
+                : `N. ${pokemon.minLevel}–${pokemon.maxLevel}`;
+        }
+
+        function mergeFishingMethods(methods) {
+            const fishingIds = new Set(["old-rod", "good-rod", "super-rod"]);
+            const fishingMethods = methods.filter((method) => fishingIds.has(method.id));
+            if (fishingMethods.length === 0) return methods;
+
+            const fishingPokemon = fishingMethods.flatMap((method) =>
+                method.pokemon.map((pokemon) => ({
+                    ...pokemon,
+                    rod: {
+                        id: method.id,
+                        label: method.label
+                    }
+                }))
+            );
+
+            return [
+                ...methods.filter((method) => !fishingIds.has(method.id)),
+                {
+                    id: "fishing",
+                    label: "Pêche",
+                    pokemon: fishingPokemon
+                }
+            ];
+        }
+
+        function renderMethod(method) {
+            const card = createElement(
+                "section",
+                method.id === "fishing" ? "method fishing" : "method"
+            );
+            const header = createElement("div", "method-header");
+            const title = createElement("div", "method-title");
+            title.append(createElement("span", "", method.label));
+            header.append(title);
+
+            const list = createElement("ul", "pokemon-list");
+            method.pokemon.forEach((pokemon) => {
+                const item = createElement("li", "pokemon");
+                if (pokemon.rod) {
+                    const rod = createElement("span", `rod-icon ${pokemon.rod.id}`);
+                    rod.setAttribute("aria-label", pokemon.rod.label);
+                    rod.title = pokemon.rod.label;
+                    item.append(rod);
+                }
+                item.append(
+                    createElement("span", "pokemon-name", pokemon.name),
+                    createElement("span", "level", levelLabel(pokemon)),
+                    createElement("span", "rate", `${pokemon.rate} %`),
+                    createElement(
+                        "span",
+                        pokemon.caught ? "caught" : "caught missing",
+                        pokemon.caught ? "✓" : "○"
+                    )
+                );
+                item.lastElementChild.setAttribute(
+                    "aria-label",
+                    pokemon.caught ? "Déjà capturé" : "Pas encore capturé"
+                );
+                item.lastElementChild.title =
+                    pokemon.caught ? "Déjà capturé" : "Pas encore capturé";
+                list.append(item);
+            });
+
+            card.append(header, list);
+            return card;
+        }
+
+        function render(data) {
+            const methods = mergeFishingMethods(data.methods);
+            const signature = JSON.stringify({
+                location: data.location,
+                methods,
+                notes: data.notes,
+                romMatches: data.romMatches
+            });
+            if (signature === renderedSignature) return;
+            renderedSignature = signature;
+
+            elements.location.textContent = data.location.name;
+            elements.methods.replaceChildren(...methods.map(renderMethod));
+
+            if (methods.length === 0) {
+                elements.message.textContent = "Aucun Pokémon sauvage dans cette zone.";
+                elements.message.classList.remove("error");
+                elements.message.hidden = false;
+            } else {
+                elements.message.hidden = true;
+            }
+
+            elements.note.textContent = (data.notes || []).join(" ");
+            elements.note.hidden = !elements.note.textContent;
+
+            elements.warning.textContent = data.romMatches
+                ? ""
+                : `ROM détectée avec le CRC ${data.retroarch.crc32}; la version française originale attend ${data.expectedCrc32}.`;
+            elements.warning.hidden = !elements.warning.textContent;
+        }
+
+        function renderError(error) {
+            renderedSignature = "";
+            elements.location.textContent = "Pokémon Émeraude";
+            elements.methods.replaceChildren();
+            elements.note.hidden = true;
+            elements.warning.hidden = true;
+            elements.message.textContent = error;
+            elements.message.classList.add("error");
+            elements.message.hidden = false;
+        }
+
+        async function update() {
+            if (updateInProgress) return;
+            updateInProgress = true;
+
+            try {
+                const response = await fetch("/api/emerald/encounters", { cache: "no-store" });
+                const data = await response.json();
+                if (!response.ok || !data.ok) {
+                    throw new Error(data.error || "Impossible de lire la mémoire du jeu.");
+                }
+                elements.message.classList.remove("error");
+                render(data);
+            } catch (error) {
+                renderError(error.message || "Connexion à RetroArch impossible.");
+            } finally {
+                updateInProgress = false;
+            }
+        }
+
+        update();
+        setInterval(update, REFRESH_MS);
+    </script>
+</body>
+
+</html>

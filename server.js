@@ -4,6 +4,8 @@ require("dotenv").config();
 
 const express = require("express");
 const path = require("path");
+const retroArchClient = require("./lib/retroarch");
+const { getEmeraldEncounters } = require("./lib/emerald");
 
 const app = express();
 const PORT = Number.parseInt(process.env.PORT || "3000", 10);
@@ -11,6 +13,8 @@ const RA_USERNAME = (process.env.RA_USERNAME || "").trim();
 const RA_WEB_API_KEY = (process.env.RA_WEB_API_KEY || "").trim();
 const MODE = (process.env.MODE || "hardcore").toLowerCase();
 const CACHE_SECONDS = Math.max(Number.parseInt(process.env.CACHE_SECONDS || "15", 10), 5);
+const RETROARCH_HOST = (process.env.RETROARCH_HOST || "127.0.0.1").trim();
+const RETROARCH_PORT = Number.parseInt(process.env.RETROARCH_PORT || "55355", 10);
 const RA_BASE_URL = "https://retroachievements.org/API";
 
 let cache = { expiresAt: 0, data: null };
@@ -120,6 +124,31 @@ app.get("/api/progress", async (_request, response) => {
   }
 });
 
+app.get("/api/emerald/encounters", async (_request, response) => {
+  const client = {
+    getStatus: () => retroArchClient.getStatus({
+      host: RETROARCH_HOST,
+      port: RETROARCH_PORT
+    }),
+    readMemory: (address, length) => retroArchClient.readMemory(address, length, {
+      host: RETROARCH_HOST,
+      port: RETROARCH_PORT
+    })
+  };
+
+  try {
+    const data = await getEmeraldEncounters(client);
+    response.set("Cache-Control", "no-store").json({ ok: true, ...data });
+  } catch (error) {
+    console.error(`[Overlay Émeraude] ${error.message}`);
+    response.status(503).json({
+      ok: false,
+      code: error.code || "EMERALD_READ_ERROR",
+      error: error.message || "Impossible de lire Pokémon Émeraude."
+    });
+  }
+});
+
 app.post("/api/simulate-trophy", (_request, response) => {
   simulationEventId += 1;
   response.set("Cache-Control", "no-store").json({ ok: true, simulationEventId });
@@ -130,5 +159,6 @@ app.listen(PORT, "127.0.0.1", () => {
   console.log("Overlay RetroAchievements lancé.");
   console.log(`OBS : http://127.0.0.1:${PORT}`);
   console.log(`Mode : ${MODE}`);
+  console.log(`Rencontres Émeraude : http://127.0.0.1:${PORT}/emerald.html`);
   console.log("");
 });

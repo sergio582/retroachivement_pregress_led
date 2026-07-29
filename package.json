@@ -4,7 +4,10 @@
   "private": true,
   "description": "Overlay OBS transparent pour afficher la progression RetroAchievements",
   "main": "server.js",
-  "scripts": {"start": "node server.js"},
+  "scripts": {
+    "start": "node server.js",
+    "test:translations": "node scripts/check-translations.js"
+  },
   "engines": {"node": ">=18"},
   "dependencies": {
     "dotenv": "^16.4.7",

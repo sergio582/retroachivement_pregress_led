@@ -25,6 +25,24 @@ Une seconde source navigateur affiche une LED verte scintillante qui clignote en
 - hauteur : `100`
 - FPS : `60`
 
+## Rencontres Pokémon Émeraude pour OBS
+
+La troisième source navigateur lit la zone courante directement dans la RAM de
+**Pokémon Version Émeraude (France)** avec le cœur **mGBA**, puis affiche les
+Pokémon sauvages, leurs niveaux et leurs taux d’apparition :
+
+- URL : `http://127.0.0.1:3000/emerald.html`
+- largeur : `480`
+- hauteur : `900`
+- FPS : `30`
+
+Dans RetroArch, active **Paramètres > Réseau > Commandes réseau**. Le port par
+défaut est `55355`. Si RetroArch tourne sur un autre ordinateur, renseigne
+`RETROARCH_HOST` et `RETROARCH_PORT` dans `.env`.
+
+La ROM française originale attendue possède le CRC32 `A3FDCCB1`. Une ROM
+modifiée peut utiliser des cartes ou des tables de rencontres différentes.
+
 ## Tester les animations
 
 Ouvre `http://127.0.0.1:3000/test.html`, puis clique sur **Simuler un trophée**.
