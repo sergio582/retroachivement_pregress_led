@@ -37,7 +37,7 @@
         }
 
         .overlay {
-            width: min(340px, 100%);
+            width: min(440px, 100%);
             filter: drop-shadow(0 5px 8px var(--shadow));
         }
 
@@ -115,7 +115,7 @@
         .method-title {
             display: flex;
             align-items: center;
-            font-size: 13px;
+            font-size: 16px;
             font-weight: 900;
             letter-spacing: 0.06em;
             text-transform: uppercase;
@@ -129,12 +129,12 @@
 
         .pokemon {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) auto auto auto;
+            grid-template-columns: 32px minmax(0, 1fr) auto auto auto;
             align-items: center;
             gap: 8px;
-            min-height: 25px;
+            min-height: 38px;
             border-bottom: 1px solid rgba(196, 181, 255, 0.12);
-            font-size: 14px;
+            font-size: 22px;
         }
 
         .pokemon:last-child {
@@ -148,30 +148,38 @@
             white-space: nowrap;
         }
 
+        .pokemon-sprite {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            object-position: center top;
+            image-rendering: pixelated;
+        }
+
         .level {
             color: var(--muted);
-            font-size: 10px;
+            font-size: 16px;
             font-weight: 700;
             white-space: nowrap;
         }
 
         .rate {
-            min-width: 38px;
+            min-width: 48px;
             color: var(--highlight);
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 900;
             text-align: right;
             font-variant-numeric: tabular-nums;
         }
 
         .method.fishing .pokemon {
-            grid-template-columns: 24px minmax(0, 1fr) auto auto auto;
+            grid-template-columns: 32px 32px minmax(0, 1fr) auto auto auto;
         }
 
         .rod-icon {
-            width: 24px;
-            height: 24px;
-            background: center / 24px 24px no-repeat
+            width: 32px;
+            height: 32px;
+            background: center / 32px 32px no-repeat
                 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEW0tLQxMTGcagjFnEFzQRDmvWrF3uactL1qg4vNWjn2g2L///8AAAAAAAAAAAAAAAAe1pDyAAAAAXRSTlMAQObYZgAAAIdJREFUGJVjYEADjIJIHNEQASSOSSOSMo8MJCnxNkeEDGOTCVxKgEFYWREmAUQmxgIwCQYGISNDmASQUFYWgHNgUhDFjM5OAnAOg4ixIkSVINCpjM4QDuNOAaC8iCOYIzlzIpBiFABzxDwLoWYCFTCmC8A4QGlBmG1gHoIDDgMk3wkiBwkUAACxJgvxeilzLwAAAABJRU5ErkJggg==");
             image-rendering: pixelated;
         }
@@ -187,14 +195,14 @@
         }
 
         .caught {
-            width: 24px;
-            height: 24px;
-            background: center / 24px 24px no-repeat
+            width: 32px;
+            height: 32px;
+            background: center / 32px 32px no-repeat
                 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEW0tLQxMTFKUlJ7e4OkpMXezfb///+cSjm0UjneWjn/lDn/1Tn/AP//AP//AP//AP/eR/OmAAAAAXRSTlMAQObYZgAAAIRJREFUGJVjYCAeMAoKCsDZUqtWLYTxgOxVqyZCJVbvAnJWQqSktmWDOBMxOIyrIMpmCoA5YDATC6dqFVjVdDBHfZWS1sqZM4vAHCUlN6eZ05WUwBYJK6UlKSkpGYLtEU12c1JSMnWEOCfM2DQ0NATqUpFQINsR5gURFxdHhIeQPEcEAAC9sTVEj1BiXgAAAABJRU5ErkJggg==");
             color: var(--accent);
-            font-size: 14px;
+            font-size: 18px;
             font-weight: 1000;
-            line-height: 24px;
+            line-height: 32px;
             text-align: center;
             text-shadow: 0 0 7px rgba(169, 150, 255, 0.8);
             image-rendering: pixelated;
@@ -331,7 +339,12 @@
                     rod.title = pokemon.rod.label;
                     item.append(rod);
                 }
+                const sprite = createElement("img", "pokemon-sprite");
+                sprite.src = pokemon.sprite;
+                sprite.alt = "";
+                sprite.setAttribute("aria-hidden", "true");
                 item.append(
+                    sprite,
                     createElement("span", "pokemon-name", pokemon.name),
                     createElement("span", "level", levelLabel(pokemon)),
                     createElement("span", "rate", `${pokemon.rate} %`),

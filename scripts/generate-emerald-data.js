@@ -239,16 +239,26 @@ function humanizeDetail(detail) {
     .join(" ");
 }
 
+const WATER_ROUTE_NUMBERS = new Set([
+  105, 106, 107, 108, 109,
+  124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134
+]);
+
+function numberedRouteName(routeNumber) {
+  return `${WATER_ROUTE_NUMBERS.has(Number(routeNumber)) ? "Chenal" : "Route"} ${routeNumber}`;
+}
+
 function locationName(mapConstant) {
   const raw = mapConstant.replace(/^MAP_/, "");
   const route = raw.match(/^ROUTE(\d+)(?:_(.+))?$/);
   if (route) {
     const detail = humanizeDetail(route[2]);
-    return detail ? `Route ${route[1]} — ${detail}` : `Route ${route[1]}`;
+    const name = numberedRouteName(route[1]);
+    return detail ? `${name} — ${detail}` : name;
   }
 
   const underwaterRoute = raw.match(/^UNDERWATER_ROUTE(\d+)$/);
-  if (underwaterRoute) return `Route ${underwaterRoute[1]} — sous-marin`;
+  if (underwaterRoute) return `${numberedRouteName(underwaterRoute[1])} — sous-marin`;
 
   const prefix = Object.keys(PLACE_NAMES)
     .sort((first, second) => second.length - first.length)

@@ -1258,7 +1258,7 @@
     },
     "0:20": {
       "id": "MAP_ROUTE105",
-      "name": "Route 105",
+      "name": "Chenal 105",
       "methods": [
         {
           "id": "surf",
@@ -1356,7 +1356,7 @@
     },
     "0:21": {
       "id": "MAP_ROUTE106",
-      "name": "Route 106",
+      "name": "Chenal 106",
       "methods": [
         {
           "id": "surf",
@@ -1454,7 +1454,7 @@
     },
     "0:22": {
       "id": "MAP_ROUTE107",
-      "name": "Route 107",
+      "name": "Chenal 107",
       "methods": [
         {
           "id": "surf",
@@ -1552,7 +1552,7 @@
     },
     "0:23": {
       "id": "MAP_ROUTE108",
-      "name": "Route 108",
+      "name": "Chenal 108",
       "methods": [
         {
           "id": "surf",
@@ -1650,7 +1650,7 @@
     },
     "0:24": {
       "id": "MAP_ROUTE109",
-      "name": "Route 109",
+      "name": "Chenal 109",
       "methods": [
         {
           "id": "surf",
@@ -3444,7 +3444,7 @@
     },
     "0:39": {
       "id": "MAP_ROUTE124",
-      "name": "Route 124",
+      "name": "Chenal 124",
       "methods": [
         {
           "id": "surf",
@@ -3549,7 +3549,7 @@
     },
     "0:40": {
       "id": "MAP_ROUTE125",
-      "name": "Route 125",
+      "name": "Chenal 125",
       "methods": [
         {
           "id": "surf",
@@ -3654,7 +3654,7 @@
     },
     "0:41": {
       "id": "MAP_ROUTE126",
-      "name": "Route 126",
+      "name": "Chenal 126",
       "methods": [
         {
           "id": "surf",
@@ -3759,7 +3759,7 @@
     },
     "0:42": {
       "id": "MAP_ROUTE127",
-      "name": "Route 127",
+      "name": "Chenal 127",
       "methods": [
         {
           "id": "surf",
@@ -3864,7 +3864,7 @@
     },
     "0:43": {
       "id": "MAP_ROUTE128",
-      "name": "Route 128",
+      "name": "Chenal 128",
       "methods": [
         {
           "id": "surf",
@@ -3976,7 +3976,7 @@
     },
     "0:44": {
       "id": "MAP_ROUTE129",
-      "name": "Route 129",
+      "name": "Chenal 129",
       "methods": [
         {
           "id": "surf",
@@ -4088,7 +4088,7 @@
     },
     "0:45": {
       "id": "MAP_ROUTE130",
-      "name": "Route 130",
+      "name": "Chenal 130",
       "methods": [
         {
           "id": "land",
@@ -4207,7 +4207,7 @@
     },
     "0:46": {
       "id": "MAP_ROUTE131",
-      "name": "Route 131",
+      "name": "Chenal 131",
       "methods": [
         {
           "id": "surf",
@@ -4312,7 +4312,7 @@
     },
     "0:47": {
       "id": "MAP_ROUTE132",
-      "name": "Route 132",
+      "name": "Chenal 132",
       "methods": [
         {
           "id": "surf",
@@ -4424,7 +4424,7 @@
     },
     "0:48": {
       "id": "MAP_ROUTE133",
-      "name": "Route 133",
+      "name": "Chenal 133",
       "methods": [
         {
           "id": "surf",
@@ -4536,7 +4536,7 @@
     },
     "0:49": {
       "id": "MAP_ROUTE134",
-      "name": "Route 134",
+      "name": "Chenal 134",
       "methods": [
         {
           "id": "surf",
@@ -4648,7 +4648,7 @@
     },
     "0:50": {
       "id": "MAP_UNDERWATER_ROUTE124",
-      "name": "Route 124 — sous-marin",
+      "name": "Chenal 124 — sous-marin",
       "methods": [
         {
           "id": "surf",
@@ -4683,7 +4683,7 @@
     },
     "0:51": {
       "id": "MAP_UNDERWATER_ROUTE126",
-      "name": "Route 126 — sous-marin",
+      "name": "Chenal 126 — sous-marin",
       "methods": [
         {
           "id": "surf",
@@ -4718,31 +4718,31 @@
     },
     "0:52": {
       "id": "MAP_UNDERWATER_ROUTE127",
-      "name": "Route 127 — sous-marin",
+      "name": "Chenal 127 — sous-marin",
       "methods": [],
       "notes": []
     },
     "0:53": {
       "id": "MAP_UNDERWATER_ROUTE128",
-      "name": "Route 128 — sous-marin",
+      "name": "Chenal 128 — sous-marin",
       "methods": [],
       "notes": []
     },
     "0:54": {
       "id": "MAP_UNDERWATER_ROUTE129",
-      "name": "Route 129 — sous-marin",
+      "name": "Chenal 129 — sous-marin",
       "methods": [],
       "notes": []
     },
     "0:55": {
       "id": "MAP_UNDERWATER_ROUTE105",
-      "name": "Route 105 — sous-marin",
+      "name": "Chenal 105 — sous-marin",
       "methods": [],
       "notes": []
     },
     "0:56": {
       "id": "MAP_UNDERWATER_ROUTE125",
-      "name": "Route 125 — sous-marin",
+      "name": "Chenal 125 — sous-marin",
       "methods": [],
       "notes": []
     },
@@ -8547,7 +8547,7 @@
     },
     "24:69": {
       "id": "MAP_UNDERWATER_ROUTE134",
-      "name": "Route 134 — sous-marin",
+      "name": "Chenal 134 — sous-marin",
       "methods": [],
       "notes": []
     },
@@ -10896,7 +10896,7 @@
     },
     "28:0": {
       "id": "MAP_ROUTE109_SEASHORE_HOUSE",
-      "name": "Route 109 — seashore maison",
+      "name": "Chenal 109 — seashore maison",
       "methods": [],
       "notes": []
     },
@@ -11010,7 +11010,7 @@
     },
     "33:0": {
       "id": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE",
-      "name": "Route 124 — diving treasure hunters maison",
+      "name": "Chenal 124 — diving treasure hunters maison",
       "methods": [],
       "notes": []
     }

@@ -31,11 +31,16 @@ La troisième source navigateur lit la zone courante directement dans la RAM de
 **Pokémon Version Émeraude (France)** avec le cœur **mGBA**, puis affiche les
 Pokémon sauvages, leurs niveaux et leurs taux d’apparition :
 
-- les noms des Pokémon sont mis en avant par rapport au nom du lieu afin de
-  rester lisibles dans ce format compact ;
+- les noms des Pokémon sont affichés en `22 px` et mis en avant par rapport au
+  nom du lieu afin de rester lisibles ;
+- chaque Pokémon rencontré est accompagné de son sprite fixe ; les sprites,
+  Poké Balls et cannes mesurent `32 × 32 px`, tandis que les niveaux, taux et
+  titres de méthodes sont affichés en `16 px` ;
+- la hauteur recommandée couvre le cas maximal des données actuelles : le
+  Parc Safari — sud-est, avec 19 Pokémon répartis en 3 sections ;
 - URL : `http://127.0.0.1:3000/emerald.html`
-- largeur : `380`
-- hauteur : `900`
+- largeur : `480`
+- hauteur : `1000`
 - FPS : `30`
 
 Dans RetroArch, active **Paramètres > Réseau > Commandes réseau**. Le port par
@@ -51,12 +56,14 @@ Cette source lit en direct les six emplacements de l’équipe sur une seule lig
 et affiche les sprites GBA, les noms ou surnoms, les états, les objets tenus et
 les PV :
 
-- les sprites des Pokémon sont affichés en `36 × 36 px` ;
+- les sprites des Pokémon sont affichés en `60 × 60 px` ;
+- le nom est aligné à gauche au-dessus du sprite et son niveau apparaît juste à
+  côté, avec des noms et des PV plus lisibles ;
 - les cartes sont compactes et s’adaptent à leur contenu, avec un espacement
   identique au-dessus du nom et sous la barre de PV ;
 - URL : `http://127.0.0.1:3000/team.html`
-- largeur : `940`
-- hauteur : `100`
+- largeur : `1516`
+- hauteur : `148`
 - FPS : `60`
 
 L’emoji `📦` signale qu’un Pokémon tient un objet. Aucun statut n’est affiché

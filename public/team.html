@@ -36,7 +36,7 @@
         }
 
         .overlay {
-            width: min(916px, 100%);
+            width: min(1492px, 100%);
             filter: drop-shadow(0 5px 8px var(--shadow));
         }
 
@@ -48,9 +48,9 @@
 
         .member {
             display: grid;
-            grid-template-columns: 40px minmax(0, 1fr);
+            grid-template-columns: 65px minmax(0, 1fr);
             align-items: start;
-            padding: 5px 7px 5px 5px;
+            padding: 8px 11px 8px 8px;
             border: 1px solid var(--line);
             border-radius: 8px 8px 15px 15px;
             background:
@@ -66,8 +66,8 @@
         }
 
         .sprite {
-            width: 36px;
-            height: 36px;
+            width: 60px;
+            height: 60px;
             justify-self: center;
             margin-top: 1px;
             object-fit: cover;
@@ -99,25 +99,34 @@
             min-width: 0;
         }
 
-        .member-line {
-            min-width: 0;
-        }
-
         .identity {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            grid-column: 1 / -1;
+            gap: 4px;
             min-width: 0;
             flex: 1;
+            text-align: left;
         }
 
         .name {
+            min-width: 0;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            font-size: 22px;
+            font-weight: 900;
+            text-align: left;
+            text-shadow: 0 1px 2px var(--shadow);
         }
 
-        .name {
-            font-size: 12px;
-            font-weight: 900;
-            text-shadow: 0 1px 2px var(--shadow);
+        .level {
+            flex: none;
+            color: var(--muted);
+            font-size: 16px;
+            font-weight: 800;
+            white-space: nowrap;
         }
 
         .badges {
@@ -125,14 +134,14 @@
             align-items: center;
             gap: 2px;
             flex: none;
-            font-size: 14px;
+            font-size: 22px;
             line-height: 1;
         }
 
         .badge {
             display: inline-grid;
-            width: 17px;
-            height: 17px;
+            width: 25px;
+            height: 25px;
             place-items: center;
         }
 
@@ -141,9 +150,9 @@
             align-items: center;
             justify-content: space-between;
             gap: 4px;
-            margin: 5px 1px 3px;
+            margin: 8px 1px 4px;
             color: var(--muted);
-            font-size: 9px;
+            font-size: 16px;
             font-weight: 800;
             letter-spacing: 0.04em;
             text-transform: uppercase;
@@ -156,7 +165,7 @@
 
         .health-bar {
             overflow: hidden;
-            height: 7px;
+            height: 11px;
             border: 1px solid rgba(211, 201, 255, 0.28);
             border-radius: 999px;
             background: rgba(7, 4, 20, 0.72);
@@ -256,9 +265,11 @@
             sprite.alt = `Sprite de ${pokemon.speciesName}`;
 
             const details = createElement("div", "details");
-            const line = createElement("div", "member-line");
             const identity = createElement("div", "identity");
-            identity.append(createElement("div", "name", pokemon.nickname || pokemon.speciesName));
+            identity.append(
+                createElement("div", "name", pokemon.nickname || pokemon.speciesName),
+                createElement("span", "level", `N. ${pokemon.level}`)
+            );
 
             const badges = createElement("div", "badges");
             if (pokemon.status.id !== "healthy") {
@@ -275,8 +286,6 @@
                 badges.append(heldItem);
             }
 
-            line.append(identity);
-
             const healthLabel = createElement("div", "health-label");
             healthLabel.append(
                 badges,
@@ -287,8 +296,8 @@
             healthFill.style.setProperty("--hp", `${Math.max(0, Math.min(pokemon.hpPercent, 100))}%`);
             healthBar.append(healthFill);
 
-            details.append(line, healthLabel, healthBar);
-            member.append(sprite, details);
+            details.append(healthLabel, healthBar);
+            member.append(identity, sprite, details);
             return member;
         }
 

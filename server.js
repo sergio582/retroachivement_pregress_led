@@ -5,7 +5,7 @@ require("dotenv").config()
 const express = require("express")
 const path = require("path")
 const retroArchClient = require("./lib/retroarch")
-const { getEmeraldEncounters } = require("./lib/emerald")
+const { addEncounterSprites, getEmeraldEncounters } = require("./lib/emerald")
 const { getEmeraldParty } = require("./lib/emerald-team")
 const emeraldData = require("./data/emerald-fr.json")
 const emeraldTeamData = require("./data/emerald-team.json")
@@ -57,6 +57,7 @@ function createRandomTeamPreview() {
 			speciesName: species.name,
 			nickname: Math.random() < 0.45 ? TEAM_TEST_NICKNAMES[randomInteger(0, TEAM_TEST_NICKNAMES.length - 1)] : null,
 			sprite: species.sprite,
+			level: randomInteger(1, 100),
 			hp,
 			maxHp,
 			hpPercent: Math.round((hp / maxHp) * 100),
@@ -226,7 +227,7 @@ app.get("/api/emerald/test/max-encounters", (_request, response) => {
 		return candidateCount > currentCount ? candidate : currentMax
 	})
 
-	const methods = area.methods.map((method) => ({
+	const methods = addEncounterSprites(area.methods).map((method) => ({
 		...method,
 		pokemon: method.pokemon.map((pokemon) => ({
 			...pokemon,
